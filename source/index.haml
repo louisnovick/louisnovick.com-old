@@ -3,21 +3,18 @@ title: Home
 description: Developer. Designer. Dreamer.
 ---
 .wrapper
-	%header.main
-		%h1
-			%a{:href => "/"} Louis Novick
-		%nav.actions
-			%ul
-				%li
-					%a{:href => "#about"} About
-				%li
-					%a{:href => "#work"} Work
-				%li
-					%a{:href => "#blog"} Blog
-				%li
-					%a{:href => "#contact"} Contact
-	%section.container#main
-		.wrapper
-			%h1 Home
-		%hr
+	%header.navigation{:role => "banner"}
+		.navigation-wrapper
+			%a.logo{:href => "#top"} Louis Novick
+			%a#js-mobile-menu.navigation-menu-button{:href => "javascript:void(0)"} MENU
+			%nav{:role => "navigation"}
+				%ul#js-navigation-menu.navigation-menu.show
+					%li.nav-link
+						%a{:href => "#about"} About
+					%li.nav-link
+						%a{:href => "#work"} Work
+					%li.nav-link
+						%a{:href => "#blog"} Blog
+					%li.nav-link
+						%a{:href => "#contact"} Contact
 
