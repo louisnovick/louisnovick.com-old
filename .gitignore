@@ -1,0 +1,6 @@
+/bin
+/.bundle
+/.sass-cache
+.DS_Store
+.cache
+/Rakefile
