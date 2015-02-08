@@ -47,9 +47,10 @@
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
+  $footer-background: #7D4F7D;
   $footer-color: white;
-  $footer-link-color: transparentize($footer-color, 0.6);
+  $footer-link-color: #fff;
+  $link-hover: #2EA197;
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
@@ -93,11 +94,11 @@
   }
 
   ul li a {
-    color: $footer-link-color;
+    color: #fff;
 
     &:focus,
     &:hover {
-      color: transparentize($footer-color, 0);
+      color: $link-hover;
     }
   }
 

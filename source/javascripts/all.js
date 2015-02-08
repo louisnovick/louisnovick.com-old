@@ -1,5 +1,7 @@
 //= require_tree .
 
+
+//Mobile menu
 $(document).ready(function() {
   var menuToggle = $('#js-mobile-menu').unbind();
   $('#js-navigation-menu').removeClass("show");
@@ -11,5 +13,21 @@ $(document).ready(function() {
         $('#js-navigation-menu').removeAttr('style');
       }
     });
+  });
+});
+
+//smooth scroll
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 500);
+        return false;
+      }
+    }
   });
 });
