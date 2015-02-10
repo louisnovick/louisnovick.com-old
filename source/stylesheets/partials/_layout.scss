@@ -1,3 +1,8 @@
+p {
+	font-family: $paragraph-font;
+	font-weight: 400;
+}
+
 #main {
     @include outer-container;
     @include pad;
@@ -34,7 +39,7 @@ $navigation-height: 87px;
   //$hero-image: 'https:raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 
   //@include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-  background-color: #34414A;
+  background-color: #2F3B44;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -72,8 +77,8 @@ $navigation-height: 87px;
         margin: 0 auto 1em auto; 
 
         @include media($large-screen) {
-          font-size: 1.9em;
-          max-width: 60%;
+          font-size: 1.7em;
+		  max-width: 60%;
         }
       }
     }
@@ -83,4 +88,104 @@ $navigation-height: 87px;
       padding: 0.7em 1em;
     }
   }
+}
+
+
+//Work section
+
+.work {
+	@include outer-container;
+	max-width: 100%;
+	padding-bottom: 130px;
+	.work-inner {
+		.work-image {
+			@include span-columns(4);
+		}
+	}
+}
+
+//slick 
+
+
+$slick-font-path: "./fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "./" !default;
+$slick-arrow-color: white !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: "←" !default;
+$slick-next-character: "→" !default;
+$slick-dot-character: "•" !default;
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    margin-top: -10px;
+    padding: 0;
+    border: none;
+    outline: none;
+    &:hover, &:focus {
+        outline: none;
+        background: transparent;
+        color: transparent;
+        &:before {
+            opacity: $slick-opacity-on-hover;
+        }
+    }
+    &.slick-disabled:before {
+        opacity: $slick-opacity-not-active;
+    }
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: $slick-font-family;
+    font-size: 20px;
+    line-height: 1;
+    color: $slick-arrow-color;
+    opacity: $slick-opacity-default;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+    left: 10px;
+    [dir="rtl"] & {
+        left: auto;
+        right: -25px;
+    }
+    &:before {
+        content: $slick-prev-character;
+        [dir="rtl"] & {
+            content: $slick-next-character;
+        }
+    }
+}
+
+.slick-next {
+    right: 0px;
+    [dir="rtl"] & {
+        left: -25px;
+        right: auto;
+    }
+    &:before {
+        content: $slick-next-character;
+        [dir="rtl"] & {
+            content: $slick-prev-character;
+        }
+    }
 }
