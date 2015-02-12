@@ -3,12 +3,12 @@
 
 //Mobile menu
 $(document).ready(function() {
-  var menuToggle = $('#js-mobile-menu').unbind();
+  var menuTworkgle = $('#js-mobile-menu').unbind();
   $('#js-navigation-menu').removeClass("show");
 
-  menuToggle.on('click', function(e) {
+  menuTworkgle.on('click', function(e) {
     e.preventDefault();
-    $('#js-navigation-menu').slideToggle(function(){
+    $('#js-navigation-menu').slideTworkgle(function(){
       if($('#js-navigation-menu').is(':hidden')) {
         $('#js-navigation-menu').removeAttr('style');
       }
@@ -77,7 +77,7 @@ $special = $event.special.debouncedresize = {
 // original: MIT license. Paul Irish. 2010.
 // contributors: Oren Solomianik, David DeSandro, Yiannis Chatzikonstantinou
 
-// blank image data-uri bypasses webkit log warning (thx doug jones)
+// blank image data-uri bypasses webkit lwork warning (thx doug jones)
 var BLANK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
 $.fn.imagesLoaded = function( callback ) {
@@ -136,7 +136,7 @@ $.fn.imagesLoaded = function( callback ) {
     // cache image and its state for future calls
     $.data( img, 'imagesLoaded', { isBroken: isBroken, src: img.src } );
 
-    // trigger deferred progress method if present
+    // trigger deferred prworkress method if present
     if ( hasNotify ) {
       deferred.notifyWith( $(img), [ isBroken, $images, $(proper), $(broken) ] );
     }
@@ -175,7 +175,7 @@ $.fn.imagesLoaded = function( callback ) {
 
       // cached images don't fire load sometimes, so we reset src, but only when
       // dealing with IE, or image is complete (loaded) and failed manual check
-      // webkit hack from http://groups.google.com/group/jquery-dev/browse_thread/thread/eee6ab7b2da50e1f
+      // webkit hack from http://groups.goworkle.com/group/jquery-dev/browse_thread/thread/eee6ab7b2da50e1f
       if ( el.readyState || el.complete ) {
         el.src = BLANK;
         el.src = src;
@@ -189,7 +189,7 @@ $.fn.imagesLoaded = function( callback ) {
 var Grid = (function() {
 
     // list of items
-  var $grid = $( '#og-grid' ),
+  var $grid = $( '#work-grid' ),
     // the items
     $items = $grid.children( 'li' ),
     // current expanded item's index
@@ -216,8 +216,8 @@ var Grid = (function() {
     support = Modernizr.csstransitions,
     // default settings
     settings = {
-      minHeight : 500,
-      speed : 350,
+      minHeight : 200,
+      speed : 500,
       easing : 'ease'
     };
 
@@ -296,7 +296,7 @@ var Grid = (function() {
   }
 
   function initItemsEvents( $items ) {
-    $items.on( 'click', 'span.og-close', function() {
+    $items.on( 'click', 'span.work-close', function() {
       hidePreview();
       return false;
     } ).children( 'a' ).on( 'click', function(e) {
@@ -370,12 +370,12 @@ var Grid = (function() {
       this.$title = $( '<h3></h3>' );
       this.$description = $( '<p></p>' );
       this.$href = $( '<a href="#">Visit website</a>' );
-      this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
-      this.$loading = $( '<div class="og-loading"></div>' );
-      this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
-      this.$closePreview = $( '<span class="og-close"></span>' );
-      this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
-      this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
+      this.$details = $( '<div class="work-details"></div>' ).append( this.$title, this.$description, this.$href );
+      this.$loading = $( '<div class="work-loading"></div>' );
+      this.$fullimage = $( '<div class="work-fullimg"></div>' ).append( this.$loading );
+      this.$closePreview = $( '<span class="work-close"></span>' );
+      this.$previewInner = $( '<div class="work-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+      this.$previewEl = $( '<div class="work-expander"></div>' ).append( this.$previewInner );
       // append preview element to the item
       this.$item.append( this.getEl() );
       // set the transitions for the preview and the item
@@ -389,11 +389,11 @@ var Grid = (function() {
         this.$item = $item;
       }
       
-      // if already expanded remove class "og-expanded" from current item and add it to new item
+      // if already expanded remove class "work-expanded" from current item and add it to new item
       if( current !== -1 ) {
         var $currentItem = $items.eq( current );
-        $currentItem.removeClass( 'og-expanded' );
-        this.$item.addClass( 'og-expanded' );
+        $currentItem.removeClass( 'work-expanded' );
+        this.$item.addClass( 'work-expanded' );
         // position the preview correctly
         this.positionPreview();
       }
@@ -454,7 +454,7 @@ var Grid = (function() {
           if( support ) {
             $( this ).off( transEndEventName );
           }
-          self.$item.removeClass( 'og-expanded' );
+          self.$item.removeClass( 'work-expanded' );
           self.$previewEl.remove();
         };
 
@@ -498,7 +498,7 @@ var Grid = (function() {
           if( support ) {
             self.$item.off( transEndEventName );
           }
-          self.$item.addClass( 'og-expanded' );
+          self.$item.addClass( 'work-expanded' );
         };
 
       this.calcHeight();

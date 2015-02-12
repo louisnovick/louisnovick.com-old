@@ -1,3 +1,4 @@
+
 p {
 	font-family: $paragraph-font;
 	font-weight: 400;
@@ -27,12 +28,12 @@ $navigation-height: 87px;
 
   $hero-background-top: #7F99BE; 
   $hero-background-bottom: #20392B;
-  $hero-color: white;
+  $hero-color: #fff;
   $gradient-angle: 10deg;
   //$hero-image: 'https:raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 
   //@include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-  background-color: #2F3B44;
+  background-color: $darkblue;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -101,167 +102,175 @@ $navigation-height: 87px;
 	}
 }*/
 
-.og-grid {
-	list-style: none;
-	padding: 20px 0;
-	margin: 0 auto;
-	text-align: center;
-	width: 100%;
+.work-grid {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  li {
+    display: inline-block;
+    margin: 10px 5px 0 5px;
+    vertical-align: top;
+    height: 250px;
+    > a {
+      border: none;
+      outline: none;
+      display: block;
+      position: relative;
+      img {
+        border: none;
+        outline: none;
+        display: block;
+        position: relative;
+      }
+    }
+    &.work-expanded > a::after {
+      top: auto;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-bottom-color: $yellow;
+      border-width: 15px;
+      left: 50%;
+      margin: -20px 0 0 -15px;
+    }
+  }
 }
 
-.og-grid li {
-	display: inline-block;
-	margin: 10px 5px 0 5px;
-	vertical-align: top;
-	height: 250px;
+.work-expander {
+  position: absolute;
+  background: $yellow;
+  top: auto;
+  left: 0;
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+  height: 0;
+  overflow: hidden;
 }
 
-.og-grid li > a,
-.og-grid li > a img {
-	border: none;
-	outline: none;
-	display: block;
-	position: relative;
+.work-expander-inner {
+  padding: 50px 30px;
+  height: 100%;
 }
 
-.og-grid li.og-expanded > a::after {
-	top: auto;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-bottom-color: #ddd;
-	border-width: 15px;
-	left: 50%;
-	margin: -20px 0 0 -15px;
+.work-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: $purple;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: $purple;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  &:hover {
+    &::before, &::after {
+      background: $darkblue;
+    }
+  }
 }
 
-.og-expander {
-	position: absolute;
-	background: #ddd;
-	top: auto;
-	left: 0;
-	width: 100%;
-	margin-top: 10px;
-	text-align: left;
-	height: 0;
-	overflow: hidden;
+.work-fullimg {
+  width: 50%;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.og-expander-inner {
-	padding: 50px 30px;
-	height: 100%;
+.work-details {
+  width: 50%;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 40px 0 20px;
 }
 
-.og-close {
-	position: absolute;
-	width: 40px;
-	height: 40px;
-	top: 20px;
-	right: 20px;
-	cursor: pointer;
+.work-fullimg {
+  text-align: center;
+  img {
+    display: inline-block;
+    max-height: 100%;
+    max-width: 100%;
+  }
 }
 
-.og-close::before,
-.og-close::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	top: 50%;
-	height: 1px;
-	background: #888;
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.og-close::after {
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-
-.og-close:hover::before,
-.og-close:hover::after {
-	background: #333;
-}
-
-.og-fullimg,
-.og-details {
-	width: 50%;
-	float: left;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-}
-
-.og-details {
-	padding: 0 40px 0 20px;
-}
-
-.og-fullimg {
-	text-align: center;
-}
-
-.og-fullimg img {
-	display: inline-block;
-	max-height: 100%;
-	max-width: 100%;
-}
-
-.og-details h3 {
-	font-weight: 300;
-	font-size: 52px;
-	padding: 40px 0 10px;
+.work-details {
+  h3 {
+	font-size: 3em;
+	padding: 10px 0 10px;
 	margin-bottom: 10px;
+	color: $darkblue;
+  }
+  p {
+	font-size: 1.1em;
+	line-height: 1.4em;
+	color: $darkblue;
+  }
+  a {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border: 3px solid #333;
+    display: inline-block;
+    margin: 30px 0 0;
+    outline: none;
+    &::before {
+      content: '\2192';
+      display: inline-block;
+      margin-right: 10px;
+    }
+    &:hover {
+      border-color: $purple;
+      color: $purple;
+    }
+  }
 }
 
-.og-details p {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 22px;
-	color: #999;
-}
-
-.og-details a {
-	font-weight: 700;
-	font-size: 16px;
-	color: #333;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	padding: 10px 20px;
-	border: 3px solid #333;
-	display: inline-block;
-	margin: 30px 0 0;
-	outline: none;
-}
-
-.og-details a::before {
-	content: '\2192';
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.og-details a:hover {
-	border-color: #999;
-	color: #999;
-}
-
-.og-loading {
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background: #ddd;
-	box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -25px 0 0 -25px;
-	-webkit-animation: loader 0.5s infinite ease-in-out both;
-	-moz-animation: loader 0.5s infinite ease-in-out both;
-	animation: loader 0.5s infinite ease-in-out both;
+.work-loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $purple;
+  box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  -webkit-animation: loader 0.5s infinite ease-in-out both;
+  -moz-animation: loader 0.5s infinite ease-in-out both;
+  animation: loader 0.5s infinite ease-in-out both;
 }
 
 @-webkit-keyframes loader {
@@ -284,16 +293,16 @@ $navigation-height: 87px;
 
 @media screen and (max-width: 830px) {
 
-	.og-expander h3 { font-size: 32px; }
-	.og-expander p { font-size: 13px; }
-	.og-expander a { font-size: 12px; }
+	.work-expander h3 { font-size: 32px; }
+	.work-expander p { font-size: 13px; }
+	.work-expander a { font-size: 12px; }
 
 }
 
 @media screen and (max-width: 650px) {
 
-	.og-fullimg { display: none; }
-	.og-details { float: none; width: 100%; }
+	.work-fullimg { display: none; }
+	.work-details { float: none; width: 100%; }
 	
 }
 
