@@ -3,12 +3,12 @@
 
 //Mobile menu
 $(document).ready(function() {
-  var menuTworkgle = $('#js-mobile-menu').unbind();
+  var menuToggle = $('#js-mobile-menu').unbind();
   $('#js-navigation-menu').removeClass("show");
 
-  menuTworkgle.on('click', function(e) {
+  menuToggle.on('click', function(e) {
     e.preventDefault();
-    $('#js-navigation-menu').slideTworkgle(function(){
+    $('#js-navigation-menu').slideToggle(function(){
       if($('#js-navigation-menu').is(':hidden')) {
         $('#js-navigation-menu').removeAttr('style');
       }
@@ -538,3 +538,34 @@ var Grid = (function() {
   };
 
 })();
+
+$(function() {
+    var $arrow = $(".arrow"),flag = -1;
+    var timer = bounce = null;
+    (bounce = function () {
+        timer = setInterval(function() {
+            flag = ~flag + 1;
+            $arrow.animate({ 
+                bottom: "+="+(flag*6)
+            }, 500)
+        },500);
+    })();                
+});
+
+
+$(function() {
+    var $skill = $(".skill"),flag = -1;
+    var timer = bounce = null;
+    (bounce = function () {
+        timer = setInterval(function() {
+            flag = ~flag + 1;
+            $skill.animate({ 
+                left: "+="+(flag*3)
+            }, 600)
+        },600);
+    })();                
+});
+
+
+
+

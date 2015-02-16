@@ -7,6 +7,14 @@ body {
   line-height: $base-line-height;
 }
 
+@font-face {
+  font-family:'devicons';
+  src:url('../../fonts/devicon.ttf'),
+      url('../../fonts/devicon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1,
 h2,
 h3,

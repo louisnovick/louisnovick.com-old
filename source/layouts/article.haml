@@ -1,0 +1,17 @@
+!!! 5
+%html{ lang: 'en' }
+
+  = partial 'shared/header'
+
+  %body{:class => page_classes}
+
+    %section.sidebar
+	    %time= pretty_date( current_page.data.date )
+      %h1= current_page.data.title
+      %p= current_page.data.description
+
+
+    %section.main-content	
+
+    = partial 'shared/footer'
+

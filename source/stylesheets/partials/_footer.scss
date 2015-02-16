@@ -3,7 +3,7 @@
    min-height: 100%;
    height: auto !important;
    height: 100%;
-   margin: 0 auto -4em;
+   margin: 0 auto;
  }
 
  html, body {
@@ -16,7 +16,8 @@
  }
 
  .footer, .wrapper-for-content-outside-of-footer:after {
-   height: 17em;
+   height: 10em;
+
 
    @include media($large-screen) {
      height: 4.5em;
@@ -40,6 +41,7 @@
 
   li {
     list-style: none;
+    display: inline;
   }
 
   a {
@@ -47,10 +49,10 @@
   }
   //////////////////////////////////////////////////////////////////////////////////
 
-  $footer-background: #7D4F7D;
-  $footer-color: white;
-  $footer-link-color: #fff;
-  $link-hover: #2EA197;
+  $footer-background: $dark-gray;
+  $footer-color: $lightblue;
+  $footer-link-color: $lightblue;
+  $link-hover: #fff;
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
@@ -94,7 +96,7 @@
   }
 
   ul li a {
-    color: #fff;
+    color: $footer-color;
 
     &:focus,
     &:hover {
@@ -103,6 +105,7 @@
   }
 
   .footer-secondary-links {
+    color: $lightblue;
     @include media($large-screen) {
       float: right;
     }
@@ -114,6 +117,7 @@
 
     ul.footer-social {
       margin-top: 1em;
+      color: $footer-color;
 
       @include media($large-screen) {
         float: right;
@@ -135,6 +139,7 @@
         height: 1.6em;
         opacity: 0.7;
         padding: 1px;
+        color: $footer-color;
 
         &:focus,
         &:hover {

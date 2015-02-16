@@ -5,8 +5,6 @@ header.navigation {
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
-  $purple: #7D4F7D;
-  $bluegreen: #2EA197;
   
   a {
     text-decoration: none;
@@ -14,9 +12,9 @@ header.navigation {
   //////////////////////////////////////////////////////////////////////////////////
 
   $navigation-padding: 1em;
-  $navigation-background: $purple;
-  $navigation-color: #fff;
-  $navigation-color-hover: $bluegreen;
+  $navigation-background: $dark-gray;
+  $navigation-color: $lightblue;
+  $navigation-color-hover: #fff;
   $navigation-height: 60px;
   $navigation-nav-button-background: $base-accent-color;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
@@ -25,7 +23,6 @@ header.navigation {
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
-  border-bottom: 1px solid darken($navigation-background, 10);
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
@@ -45,7 +42,7 @@ header.navigation {
     padding-left: $navigation-padding;
     padding-right: 2em;
     position: relative;
-	color: #fff;
+	color: $lightblue;
 	top: 15px;
 	font-size: 1.2em;
 
