@@ -12,7 +12,7 @@ $navigation-height: 87px;
 
 .content {
 	padding-top: $navigation-height;
-	background-color: $dark-gray;
+	background-color: $lightblue;
 }
 
 //for plus sign rotation
@@ -97,6 +97,7 @@ $navigation-height: 87px;
   margin: 0 auto;
   text-align: center;
   width: 100%;
+  max-width: 1300px;
   background-color: $lightblue;
   li {
     display: inline-block;

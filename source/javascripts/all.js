@@ -538,7 +538,7 @@ var Grid = (function() {
   };
 
 })();
-
+/*
 $(function() {
     var $arrow = $(".arrow"),flag = -1;
     var timer = bounce = null;
@@ -565,7 +565,7 @@ $(function() {
         },600);
     })();                
 });
-
+*/
 
 
 
