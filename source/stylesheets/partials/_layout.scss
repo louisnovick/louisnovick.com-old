@@ -115,6 +115,7 @@ $navigation-height: 87px;
         display: block;
         position: relative;
         min-width: 250px;
+        max-width: 250px;
         border-radius: 200px;
       }
       div.arrow {
@@ -335,7 +336,6 @@ $navigation-height: 87px;
     @include outer-container;
     li.skill {
       position: relative;
-      left: 0px;
       width: 19.52%;;
       font-family: 'devicons';
       display: inline-block;

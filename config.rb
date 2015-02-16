@@ -35,5 +35,5 @@ activate :deploy do |deploy|
   deploy.method = :git
   # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
   deploy.branch   = 'master' 
-  deploy.commit_message = 'timestamp ' + 'version'   
+  deploy.commit_message = `timestamp` by middleman-deploy `version`   
 end

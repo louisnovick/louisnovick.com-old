@@ -553,19 +553,5 @@ $(function() {
 });
 
 
-$(function() {
-    var $skill = $(".skill"),flag = -1;
-    var timer = bounce = null;
-    (bounce = function () {
-        timer = setInterval(function() {
-            flag = ~flag + 1;
-            $skill.animate({ 
-                left: "+="+(flag*3)
-            }, 600)
-        },600);
-    })();                
-});
-
-
 
 
