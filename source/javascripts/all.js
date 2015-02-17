@@ -539,18 +539,7 @@ var Grid = (function() {
 
 })();
 
-$(function() {
-    var $arrow = $(".arrow"),flag = -1;
-    var timer = bounce = null;
-    (bounce = function () {
-        timer = setInterval(function() {
-            flag = ~flag + 1;
-            $arrow.animate({ 
-                bottom: "+="+(flag*6)
-            }, 500)
-        },500);
-    })();                
-});
+
 
 
 

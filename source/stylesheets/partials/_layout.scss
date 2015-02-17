@@ -93,7 +93,7 @@ $navigation-height: 87px;
 
 .work-grid {
   list-style: none;
-  padding: 20px 0;
+  padding: 40px 0;
   margin: 0 auto;
   text-align: center;
   width: 100%;
@@ -109,14 +109,30 @@ $navigation-height: 87px;
       outline: none;
       display: block;
       position: relative;
-      img {
-        border: none;
-        outline: none;
+      .work_cir {
         display: block;
         position: relative;
+        min-height: 250px;
+        max-height: 250px;
         min-width: 250px;
+        color: #D5FBFF;
         max-width: 250px;
+        background-color: #2F3738;
         border-radius: 200px;
+        .cir_text {
+          position: relative;
+          top: 45px;
+          max-width: 200px;
+          margin: 0px auto;
+          h3 {
+            font-size: 1.5em;
+            line-height: 20px;
+          }
+          p {
+            position: relative;
+            line-height: 20px;
+          }
+        }
       }
       div.arrow {
         background: url("../images/thumbs/arrow.svg") no-repeat top left;
@@ -135,7 +151,7 @@ $navigation-height: 87px;
         width: 70px;
         position: absolute;
         height: 70px;
-        bottom: 40px;
+        bottom: 38px;
         left: 90px;
       }
     }
