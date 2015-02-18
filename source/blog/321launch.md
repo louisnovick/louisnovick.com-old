@@ -14,10 +14,11 @@ Let this serve as an introduction.  My goal for this blog is to reflect on what 
 * SCSS Partials and inline Media Queries
 * SVG
 
+
 ###Haml and Static Site Templating
 
 Prior to developing this site I had never used HAML.  I had dabbled in ERB a few months ago when I was getting my hands dirty with Ruby on Rails but had never really explored it in earnest.  Honestly, the only other real HTML templating I had really been exposed to was Jade but my knowledge of it was limited.  I wont say that any one of them is the "best" because I truly believe that it depends entirely on your own preference.  Due to my lack of prior experience in HTML templating I had a clean slate if you will.  Lets just say that learning Haml has ruined me for Vanilla HTML forever.  The simple fact that this
-`.row` in Haml is equal to this `<div class="row"></div>` saves you a ton of time when dealing with long templates.  Obviously, this doesn't even scratch the surface of what you can do with [Haml](http://http://haml.info/).
+`.row` in Haml is equal to this ```<div class="row"></div>``` saves you a ton of time when dealing with long templates.  Obviously, this doesn't even scratch the surface of what you can do with [Haml](http://http://haml.info/).
 
 ###SCSS Partials and Inline Media Queries
 
