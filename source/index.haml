@@ -1,132 +1,129 @@
 ---
 title: Home
-description: Developer. Designer. Dreamer.
+description: Web Design and Development || Orlando, FL.
 ---
-.wrapper
-	%header.navigation{:role => "banner"}
-		.navigation-wrapper
-			%a.logo{:href => "#top"} Louis Novick
-			%a#js-mobile-menu.navigation-menu-button{:href => "javascript:void(0)"} MENU
-			%nav{:role => "navigation"}
-				%ul#js-navigation-menu.navigation-menu.show
-					%li.nav-link
-						%a{:href => "#work-grid"} Work
-	.content#top	
-		.hero
-			.hero-inner
-				.hero-logo{:href => ""}
-					%img{:alt => "Louis Novick Web Development", :src => "images/louis.jpg\n"}/
-				.hero-copy
-					%h1
-						Louis Novick
-					%p 
-						Front-End Developer at authenticWEB, UX Enthusiast and Student
 
-		%ul#work-grid.work-grid
-			%li
-				%a{:href => "http://cpricelawfirm.com/", :target => "_blank", "data-description" => "Price Law Firm, a bankruptcy and foreclosure law firm in Orlando, Florida was in need of a new website.  I was in charge of developing the site and laying out the content based on the design provided.", "data-largesrc" => "images/price.jpg", "data-title" => "Price Law Firm"}
-					.work_cir
-						.cir_text
-							%h3 Price Law Firm
-							%p Attorneys at Law
-					.circle
-					.arrow
-			%li
-				%a{:href => "http://www.tc-tx.com/", :target => "_blank", "data-description" => "Live Oak is a community in San Marcos, Texas.  They are dedicated to offering the best care possible for adults living with cognitive disabilities and brain injury.  I was tasked with creating this site.", "data-largesrc" => "images/liveoak.jpg", "data-title" => "Live Oak Living"}
-					.work_cir
-						.cir_text
-							%h3 Live Oak
-							%p Living Communities
-					.circle
-					.arrow
-			%li
-				%a{:href => "http://bmayrlaw.com/attorney-profile/", :target => "_blank", "data-description" => "Brent Mayr, an attorney with over 15 years of experience in Criminal Law and a board certification in the field of criminal justice by the Texas Board of Legal Specialization wanted a page on his site to capture his persona.  I was responsible for developing his attorney profile.", "data-largesrc" => "images/bmayr.jpg", "data-title" => "Brent Mayr"}
-					.work_cir
-						.cir_text
-							%h3 Brent Mayr
-							%p Criminal Lawyer
-					.circle
-					.arrow
-			%li
-				%a{:href => "#", :target => "_blank", "data-description" => "Site is currently in development.", "data-largesrc" => "images/comingsoon.jpg", "data-title" => "Orlando Pub Crawl"}
-					.work_cir
-						.cir_text
-							%h3 Orlando Pub Crawl
-							%p Orlando on all Fours
-					.circle
-					.arrow
-			%li
-				%a{:href => "https://twitter.com/Empirespace", :target => "_blank", "data-description" => "For one of my class assignments I needed to develop a twitter bot that would leverage an existing API.  Using the Star Wars API, 'Swapi', I programmed a twitter bot that produces quality Content related to the planets of Star Wars.", "data-largesrc" => "images/espace.jpg", "data-title" => "Empire Space"}
-					.work_cir
-						.cir_text
-							%h3 Empire Space
-							%p Star Wars Twitter Bot
-					.circle
-					.arrow
-			%li
-				%a{:href => "http://www.goaaba.org", :target => "_blank", "data-description" => "The Greater Orlando Asian American Bar Association needed a new website.  Development goals centered around giving the association a reliable outlet to post any new information as well as welcome new members to the group.", "data-largesrc" => "images/goaaba.jpg", "data-title" => "GOAABA"}
-					.work_cir
-						.cir_text
-							%h3 GOAABA
-							%p Greater Orlando Asian American Bar Association
-					.circle
-					.arrow
-			%li
-				%a{:href => "http://www.thetagalsuperhero5krun.com/", :target => "_blank", "data-description" => "Guardian Ad Litem required an informational site promoting their Super Hero 5k run.  I created the site with every intention of providing information in the most efficient way possible.", "data-largesrc" => "images/gal.jpg", "data-title" => "Super Hero 5k"}
-					.work_cir
-						.cir_text
-							%h3 Guardian Ad Litem
-							%p Super Hero 5k
-					.circle
-					.arrow
+%section.blogmain
+	%div.latestpost
+		- post = get_posts().first
+		%p.label Latest Post
+		= link_to post.data.title, post.url, class: 'latestpost_title'
+		%p.js-orphan= post.data.description
+		= link_to 'Read It', post.url, class: 'btn'
+	%div.blogsection
+		%p.label Blog
+		- get_posts().drop( 1 ).each do | post |
+			%h3 Blog Posts
+		.posttitle
+			= link_to post.data.title, post.url
+		.datetime
+			%time= pretty_date( post.data.date )
 
-		.devskills
-			%h3 Things I have worked with
-			%ul
-				%li.skill
-					&#xe602;
-				%li.skill
-					&#xe639;
-				%li.skill
-					&#xe63b;
-				%li.skill
-					&#xe63d;
-				%li.skill
-					&#xe604;
-				%li.skill
-					&#xe64e;
-				%li.skill
-					&#xe653;
-				%li.skill
-					&#xe650;
-				%li.skill
-					&#xe619;
-				%li.skill
-					&#xe64b;
-				%li.skill
-					&#xe649;
-				%li.skill
-					&#xe636;
-				%li.skill
-					&#xe61f;
-				%li.skill
-					&#xe60b;
-				%li.skill
-					&#xe64c;
-				%li.skill
-					&#xe64d;
-				%li.skill
-					&#xe61e;
-				%li.skill
-					&#xe63a;
-				%li.skill
-					&#xe663;
-				%li.skill
-					&#xe67a;
-				%li.skill
-					&#xe695;
-				%li.skill
-					&#xe697;
+.worksection
+	%ul#work-grid.work-grid
+		%li
+			%a{:href => "http://cpricelawfirm.com/", :target => "_blank", "data-description" => "Price Law Firm, a bankruptcy and foreclosure law firm in Orlando, Florida was in need of a new website.  I was in charge of developing the site and laying out the content based on the design provided.", "data-largesrc" => "images/price.jpg", "data-title" => "Price Law Firm"}
+				.work_cir
+					.cir_text
+						%h3 Price Law Firm
+						%p Attorneys at Law
+				.circle
+				.arrow
+		%li
+			%a{:href => "http://www.tc-tx.com/", :target => "_blank", "data-description" => "Live Oak is a community in San Marcos, Texas.  They are dedicated to offering the best care possible for adults living with cognitive disabilities and brain injury.  I was tasked with creating this site.", "data-largesrc" => "images/liveoak.jpg", "data-title" => "Live Oak Living"}
+				.work_cir
+					.cir_text
+						%h3 Live Oak
+						%p Living Communities
+				.circle
+				.arrow
+		%li
+			%a{:href => "http://bmayrlaw.com/attorney-profile/", :target => "_blank", "data-description" => "Brent Mayr, an attorney with over 15 years of experience in Criminal Law and a board certification in the field of criminal justice by the Texas Board of Legal Specialization wanted a page on his site to capture his persona.  I was responsible for developing his attorney profile.", "data-largesrc" => "images/bmayr.jpg", "data-title" => "Brent Mayr"}
+				.work_cir
+					.cir_text
+						%h3 Brent Mayr
+						%p Criminal Lawyer
+				.circle
+				.arrow
+		%li
+			%a{:href => "#", :target => "_blank", "data-description" => "Site is currently in development.", "data-largesrc" => "images/comingsoon.jpg", "data-title" => "Orlando Pub Crawl"}
+				.work_cir
+					.cir_text
+						%h3 Orlando Pub Crawl
+						%p Orlando on all Fours
+				.circle
+				.arrow
+		%li
+			%a{:href => "https://twitter.com/Empirespace", :target => "_blank", "data-description" => "For one of my class assignments I needed to develop a twitter bot that would leverage an existing API.  Using the Star Wars API, 'Swapi', I programmed a twitter bot that produces quality Content related to the planets of Star Wars.", "data-largesrc" => "images/espace.jpg", "data-title" => "Empire Space"}
+				.work_cir
+					.cir_text
+						%h3 Empire Space
+						%p Star Wars Twitter Bot
+				.circle
+				.arrow
+		%li
+			%a{:href => "http://www.goaaba.org", :target => "_blank", "data-description" => "The Greater Orlando Asian American Bar Association needed a new website.  Development goals centered around giving the association a reliable outlet to post any new information as well as welcome new members to the group.", "data-largesrc" => "images/goaaba.jpg", "data-title" => "GOAABA"}
+				.work_cir
+					.cir_text
+						%h3 GOAABA
+						%p Greater Orlando Asian American Bar Association
+				.circle
+				.arrow
+		%li
+			%a{:href => "http://www.thetagalsuperhero5krun.com/", :target => "_blank", "data-description" => "Guardian Ad Litem required an informational site promoting their Super Hero 5k run.  I created the site with every intention of providing information in the most efficient way possible.", "data-largesrc" => "images/gal.jpg", "data-title" => "Super Hero 5k"}
+				.work_cir
+					.cir_text
+						%h3 Guardian Ad Litem
+						%p Super Hero 5k
+				.circle
+				.arrow
+
+.devskills#skills
+	%h3 Things I have worked with
+	%ul
+		%li.skill
+			&#xe602;
+		%li.skill
+			&#xe639;
+		%li.skill
+			&#xe63b;
+		%li.skill
+			&#xe63d;
+		%li.skill
+			&#xe604;
+		%li.skill
+			&#xe64e;
+		%li.skill
+			&#xe653;
+		%li.skill
+			&#xe650;
+		%li.skill
+			&#xe619;
+		%li.skill
+			&#xe64b;
+		%li.skill
+			&#xe649;
+		%li.skill
+			&#xe636;
+		%li.skill
+			&#xe61f;
+		%li.skill
+			&#xe60b;
+		%li.skill
+			&#xe64c;
+		%li.skill
+			&#xe64d;
+		%li.skill
+			&#xe61e;
+		%li.skill
+			&#xe63a;
+		%li.skill
+			&#xe663;
+		%li.skill
+			&#xe67a;
+		%li.skill
+			&#xe695;
+			
 				
 
 					

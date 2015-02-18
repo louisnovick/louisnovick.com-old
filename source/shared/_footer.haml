@@ -1,13 +1,16 @@
 %footer.footer{:role => "contentinfo"}
-  %ul
-    %li
-      %a{:href => "#work-grid"} Work
   .footer-secondary-links
     &copy; Louis Novick 2015
     %ul.footer-social
-      %li
-        %a{:href => "http://www.twitter.com/louisnovick", :target => "_blank"}
-          %img{:alt => "Twitter", :src => "https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png"}
+      %li.nav-link
+        %a{:href => "http://www.twitter.com/louisnovick", :target => "_blank"} 
+          %img{:alt => "Twitter", :src => "../../images/thumbs/twitter.svg\n"}/
+      %li.nav-link
+        %a{:href => "http://www.github.com/louisnovick", :target => "_blank"} 
+          %img{:alt => "Github", :src => "../../images/thumbs/github.svg\n"}/
+      %li.nav-link
+        %a{:href => "http://www.dribbble.com/louisnovick", :target => "_blank"} 
+          %img{:alt => "Dribbble", :src => "../../images/thumbs/dribbble.svg\n"}/
 
 = javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
 = javascript_include_tag '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js'

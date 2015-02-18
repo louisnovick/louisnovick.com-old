@@ -1,11 +1,13 @@
 !!! 5
 %html{ lang: 'en' }
 
-  = partial 'shared/header'
+	= partial 'shared/header'
 
-  %body{:class => page_classes}
+	%body{:class => page_classes}
+		.wrapper
+			= partial 'shared/nav'
 
-    = yield
+			= yield
 
-    = partial 'shared/footer'
+			= partial 'shared/footer'
 

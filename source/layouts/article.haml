@@ -1,17 +1,20 @@
 !!! 5
 %html{ lang: 'en' }
 
-  = partial 'shared/header'
+	= partial 'shared/header'
 
-  %body{:class => page_classes}
+	%body{:class => page_classes}
 
-    %section.sidebar
-	    %time= pretty_date( current_page.data.date )
-      %h1= current_page.data.title
-      %p= current_page.data.description
+		= partial 'shared/nav'
+
+		%section.article_header
+			%h1= current_page.data.title
+			%time= pretty_date( current_page.data.date )
 
 
-    %section.main-content	
+		%section.main-content	
 
-    = partial 'shared/footer'
+			= yield
+
+		= partial 'shared/footer'
 

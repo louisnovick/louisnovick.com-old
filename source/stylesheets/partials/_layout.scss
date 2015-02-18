@@ -3,16 +3,22 @@ p {
 	font-weight: 400;
 }
 
+.btn {
+  background-color: $dark-gray;
+  padding: 6px 10px;
+  border-radius: 50px;
+}
+
 #main {
     @include outer-container;
     @include pad;
+    background-color: $lightblue;
 }
 
 $navigation-height: 87px;
 
 .content {
 	padding-top: $navigation-height;
-	background-color: $lightblue;
 }
 
 //for plus sign rotation
@@ -24,149 +30,142 @@ $navigation-height: 87px;
   -o-transform: rotate(90deg); /* Opera */
 }
 
-.hero {  
-  
-///////////////////////////////////////////////////////////////////////////////////
-  $base-border-radius: 3px !default;
-  $base-accent-color: #7D4F7D !default;
-  $large-screen: em(860) !default;
-  
-//////////////////////////////////////////////////////////////////////////////////
-
-  $hero-background-top: #7F99BE; 
-  $hero-background-bottom: #20392B;
-  $hero-color: $dark-gray;
-  $gradient-angle: 10deg;
-  //$hero-image: 'https:raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
-
-  //@include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
-  background-color: $blue;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  //padding-bottom: 3em;
-
-  .hero-logo img {
-    height: 7em;
-	  border-radius: 100px;
+.blogmain {
+  @include outer-container;
+  padding: 4%;
+  .latestpost { 
+    .latestpost_title {
+      font-size: 1.2em;
+    }
+    @include span-columns(4);
+    @include media(max-width 769px) {
+       @include span-columns(12);
+    }
+    .label {
+      font-size: 2.2em;
+      font-family: $base-font-family;
+      margin: 0;
+    }
   }
-
-  .hero-inner {
-    @include outer-container;
-    @include clearfix;
-    color: $hero-color;
-    margin: auto;
-    padding: 3em;
+  .blogsection {
     text-align: center;
-
-    .hero-copy {
-      text-align: center;
-      
-      h1 {
-        font-size: 1.6em;
-        margin-bottom: 0.1em;
-
-        @include media($large-screen) {
-          font-size: 2.8em;
-        }
-      }
-
-      p {
-        font-weight: 200;
-        line-height: 1.4em;
-        font-size: 1.3em;
-        margin: 0 auto 1em auto; 
-
-        @include media($large-screen) {
-          font-size: 1.7em;
-		  max-width: 60%;
-        }
+    position: relative;
+    @include span-columns(8);
+    @include media(max-width 769px) {
+       @include span-columns(12);
+       text-align: left;
+       padding-top: 30px;
+       border-top: 1px solid $blue;
+       margin-top: 30px;
+       padding-top: 20px 0;
+    }
+    .posttitle { 
+      @include span-columns(7); 
+      font-size: 1.1em;
+      @include media(max-width 769px) {
+        font-size: .9em;
       }
     }
-
-    button {
-      @include button(flat, $base-accent-color);
-      padding: 0.7em 1em;
+    .datetime { 
+      @include span-columns(5); 
+      font-size: 1.1em;
+      @include media(max-width 769px) {
+        font-size: .9em;
+      }
+    }
+    .label {
+      font-size: 2.2em;
+      font-family: $base-font-family;
+      margin: 0;
+      @include media(min-width 769px) {
+        position: relative;
+        left: 10px;
+      }
     }
   }
 }
 
-.work-grid {
-  list-style: none;
-  padding: 40px 0;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  max-width: 1300px;
+
+.worksection {
   background-color: $lightblue;
-  li {
-    display: inline-block;
-    margin: 10px 5px 0 5px;
-    vertical-align: top;
-    height: 250px;
-    > a {
-      border: none;
-      outline: none;
-      display: block;
-      position: relative;
-      .work_cir {
+  .work-grid {
+    list-style: none;
+    padding: 40px 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    max-width: 1300px;
+    background-color: $lightblue;
+    li {
+      display: inline-block;
+      margin: 10px 5px 0 5px;
+      vertical-align: top;
+      height: 250px;
+      max-height: 700px;
+      > a {
+        border: none;
+        outline: none;
         display: block;
         position: relative;
-        min-height: 250px;
-        max-height: 250px;
-        min-width: 250px;
-        color: #D5FBFF;
-        max-width: 250px;
-        background-color: #2F3738;
-        border-radius: 200px;
-        .cir_text {
+        .work_cir {
+          display: block;
           position: relative;
-          top: 45px;
-          max-width: 200px;
-          margin: 0px auto;
-          h3 {
-            font-size: 1.5em;
-            line-height: 20px;
-          }
-          p {
+          min-height: 250px;
+          max-height: 250px;
+          min-width: 250px;
+          color: #D5FBFF;
+          max-width: 250px;
+          background-color: #2F3738;
+          border-radius: 200px;
+          .cir_text {
             position: relative;
-            line-height: 20px;
+            top: 45px;
+            max-width: 200px;
+            margin: 0px auto;
+            h3 {
+              font-size: 1.5em;
+              line-height: 20px;
+            }
+            p {
+              position: relative;
+              line-height: 20px;
+            }
           }
         }
+        div.arrow {
+          background: url("../images/thumbs/arrow.svg") no-repeat top left;
+          display: block;
+          text-indent: -9999px;
+          width: 65px;
+          position: absolute;
+          height: 65px;
+          bottom: 40px;
+          left: 93px;
+        }
+        div.circle {
+          background: url("../images/thumbs/circle.svg") no-repeat top left;
+          display: block;
+          text-indent: -9999px;
+          width: 70px;
+          position: absolute;
+          height: 70px;
+          bottom: 38px;
+          left: 90px;
+        }
       }
-      div.arrow {
-        background: url("../images/thumbs/arrow.svg") no-repeat top left;
-        display: block;
-        text-indent: -9999px;
-        width: 65px;
+      &.work-expanded > a::after {
+        top: auto;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
         position: absolute;
-        height: 65px;
-        bottom: 40px;
-        left: 93px;
+        pointer-events: none;
+        border-bottom-color: $dark-gray;
+        border-width: 15px;
+        left: 50%;
+        margin: -20px 0 0 -15px;
       }
-      div.circle {
-        background: url("../images/thumbs/circle.svg") no-repeat top left;
-        display: block;
-        text-indent: -9999px;
-        width: 70px;
-        position: absolute;
-        height: 70px;
-        bottom: 38px;
-        left: 90px;
-      }
-    }
-    &.work-expanded > a::after {
-      top: auto;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      border-bottom-color: $dark-gray;
-      border-width: 15px;
-      left: 50%;
-      margin: -20px 0 0 -15px;
     }
   }
 }
@@ -182,6 +181,9 @@ $navigation-height: 87px;
   height: 0;
   overflow: hidden;
   max-height: 400px;
+  @include media(max-width 526px) {
+    max-height: 350px;
+  }
 }
 
 .work-expander-inner {
