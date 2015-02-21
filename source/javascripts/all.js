@@ -523,7 +523,30 @@ var Grid = (function() {
 
 })();
 
-
+$(function() {
+    $("#contactForm").submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        url: "//formspree.io/louis@louisnovick.com", 
+        method: "POST",
+        data: $(this).serialize(),
+        dataType: "json",
+        success: function(data){
+          // Success message
+          $('#contactForm').html("<strong>Message sent.  I will get back to you soon, thank you!</strong>");
+          //clear all fields
+          $('#contactForm').trigger("reset");
+          $('.formcontain p').addClass("hidden");
+        },
+        error: function(){
+          // Fail message
+          $('#contactForm').append("<strong>Sorry there seems to have been an issue.  Please try again.</strong>");
+          //clear all fields
+          $('#contactForm').trigger("reset");
+        }
+      });
+    });
+});
 
 
 

@@ -28,7 +28,7 @@ label {
 
 #{$all-text-inputs},
 select[multiple=multiple],
-textarea {
+textarea, .input_text {
   background-color: $base-background-color;
   border: $base-border;
   border-radius: $base-border-radius;
@@ -76,3 +76,5 @@ select {
   max-width: 100%;
   width: auto;
 }
+
+
