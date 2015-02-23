@@ -37,9 +37,15 @@ header.navigation {
     .socialnav {
       float: right;
       margin-right: 20px;
+      @include media(max-width 360px) {
+        margin-right: 0;
+      }
       li.nav-link {
         display: inline-block;
         margin: .65em;
+        @include media(max-width 360px) {
+          margin: .65em .25em;
+        }
         img {
           width: 40px;
         }

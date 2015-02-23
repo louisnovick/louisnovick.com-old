@@ -8,7 +8,7 @@ description: Web Design and Development || Orlando, FL.
 		- post = get_posts().first
 		%p.label Latest Post
 		= link_to post.data.title, post.url, class: 'latestpost_title'
-		%p.js-orphan= post.data.description
+		%p.blogexc= post.data.description
 		= link_to 'Read It', post.url, class: 'btn'
 	%div.blogsection
 		%p.label Blog
@@ -22,7 +22,7 @@ description: Web Design and Development || Orlando, FL.
 .worksection
 	%ul#work-grid.work-grid
 		%li
-			%a{:href => "http://cpricelawfirm.com/", :target => "_blank", "data-description" => "Price Law Firm, a bankruptcy and foreclosure law firm in Orlando, Florida was in need of a new website.  I was in charge of developing the site and laying out the content based on the design provided.", "data-largesrc" => "images/price.jpg", "data-title" => "Price Law Firm"}
+			%a{:href => "http://cpricelawfirm.com/", "data-description" => "Price Law Firm, a bankruptcy and foreclosure law firm in Orlando, Florida was in need of a new website.  I was in charge of developing the site and laying out the content based on the design provided.", "data-largesrc" => "images/price.jpg", "data-title" => "Price Law Firm"}
 				.work_cir
 					.cir_text
 						%h3 Price Law Firm
@@ -30,7 +30,7 @@ description: Web Design and Development || Orlando, FL.
 				.circle
 				.arrow
 		%li
-			%a{:href => "http://www.tc-tx.com/", :target => "_blank", "data-description" => "Live Oak is a community in San Marcos, Texas.  They are dedicated to offering the best care possible for adults living with cognitive disabilities and brain injury.  I was tasked with creating this site.", "data-largesrc" => "images/liveoak.jpg", "data-title" => "Live Oak Living"}
+			%a{:href => "http://www.tc-tx.com/", "data-description" => "Live Oak is a community in San Marcos, Texas.  They are dedicated to offering the best care possible for adults living with cognitive disabilities and brain injury.  I was tasked with creating this site.", "data-largesrc" => "images/liveoak.jpg", "data-title" => "Live Oak Living"}
 				.work_cir
 					.cir_text
 						%h3 Live Oak
@@ -38,7 +38,7 @@ description: Web Design and Development || Orlando, FL.
 				.circle
 				.arrow
 		%li
-			%a{:href => "http://bmayrlaw.com/attorney-profile/", :target => "_blank", "data-description" => "Brent Mayr, an attorney with over 15 years of experience in Criminal Law and a board certification in the field of criminal justice by the Texas Board of Legal Specialization wanted a page on his site to capture his persona.  I was responsible for developing his attorney profile.", "data-largesrc" => "images/bmayr.jpg", "data-title" => "Brent Mayr"}
+			%a{:href => "http://bmayrlaw.com/attorney-profile/", "data-description" => "Brent Mayr, an attorney with over 15 years of experience in Criminal Law and a board certification in the field of criminal justice by the Texas Board of Legal Specialization wanted a page on his site to capture his persona.  I was responsible for developing his attorney profile.", "data-largesrc" => "images/bmayr.jpg", "data-title" => "Brent Mayr"}
 				.work_cir
 					.cir_text
 						%h3 Brent Mayr
@@ -46,7 +46,7 @@ description: Web Design and Development || Orlando, FL.
 				.circle
 				.arrow
 		%li
-			%a{:href => "#", :target => "_blank", "data-description" => "Site is currently in development.", "data-largesrc" => "images/comingsoon.jpg", "data-title" => "Orlando Pub Crawl"}
+			%a{:href => "#", "data-description" => "Site is currently in development.", "data-largesrc" => "images/comingsoon.jpg", "data-title" => "Orlando Pub Crawl"}
 				.work_cir
 					.cir_text
 						%h3 Orlando Pub Crawl
@@ -54,7 +54,7 @@ description: Web Design and Development || Orlando, FL.
 				.circle
 				.arrow
 		%li
-			%a{:href => "https://twitter.com/Empirespace", :target => "_blank", "data-description" => "For one of my class assignments I needed to develop a twitter bot that would leverage an existing API.  Using the Star Wars API, 'Swapi', I programmed a twitter bot that produces quality Content related to the planets of Star Wars.", "data-largesrc" => "images/espace.jpg", "data-title" => "Empire Space"}
+			%a{:href => "https://twitter.com/Empirespace", "data-description" => "For one of my class assignments I needed to develop a twitter bot that would leverage an existing API.  Using the Star Wars API, 'Swapi', I programmed a twitter bot that produces quality Content related to the planets of Star Wars.", "data-largesrc" => "images/espace.jpg", "data-title" => "Empire Space"}
 				.work_cir
 					.cir_text
 						%h3 Empire Space
@@ -62,7 +62,7 @@ description: Web Design and Development || Orlando, FL.
 				.circle
 				.arrow
 		%li
-			%a{:href => "http://www.goaaba.org", :target => "_blank", "data-description" => "The Greater Orlando Asian American Bar Association needed a new website.  Development goals centered around giving the association a reliable outlet to post any new information as well as welcome new members to the group.", "data-largesrc" => "images/goaaba.jpg", "data-title" => "GOAABA"}
+			%a{:href => "http://www.goaaba.org", "data-description" => "The Greater Orlando Asian American Bar Association needed a new website.  Development goals centered around giving the association a reliable outlet to post any new information as well as welcome new members to the group.", "data-largesrc" => "images/goaaba.jpg", "data-title" => "GOAABA"}
 				.work_cir
 					.cir_text
 						%h3 GOAABA
@@ -70,7 +70,7 @@ description: Web Design and Development || Orlando, FL.
 				.circle
 				.arrow
 		%li
-			%a{:href => "http://www.thetagalsuperhero5krun.com/", :target => "_blank", "data-description" => "Guardian Ad Litem required an informational site promoting their Super Hero 5k run.  I created the site with every intention of providing information in the most efficient way possible.", "data-largesrc" => "images/gal.jpg", "data-title" => "Super Hero 5k"}
+			%a{:href => "http://www.thetagalsuperhero5krun.com/", "data-description" => "Guardian Ad Litem required an informational site promoting their Super Hero 5k run.  I created the site with every intention of providing information in the most efficient way possible.", "data-largesrc" => "images/gal.jpg", "data-title" => "Super Hero 5k"}
 				.work_cir
 					.cir_text
 						%h3 Guardian Ad Litem

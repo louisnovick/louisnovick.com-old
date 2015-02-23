@@ -34,23 +34,26 @@ $navigation-height: 87px;
   @include outer-container;
   padding: 4%;
   .latestpost { 
+    @include span-columns(6);
+    @include media(max-width 769px) {
+      @include span-columns(12);
+    }
     .latestpost_title {
       font-size: 1.2em;
-    }
-    @include span-columns(4);
-    @include media(max-width 769px) {
-       @include span-columns(12);
     }
     .label {
       font-size: 2.2em;
       font-family: $base-font-family;
       margin: 0;
     }
+    .blogexc {
+      padding: 10px 0;
+    }
   }
   .blogsection {
     text-align: center;
     position: relative;
-    @include span-columns(8);
+    @include span-columns(6);
     @include media(max-width 769px) {
        @include span-columns(12);
        text-align: left;
@@ -182,7 +185,7 @@ $navigation-height: 87px;
   overflow: hidden;
   max-height: 400px;
   @include media(max-width 526px) {
-    max-height: 350px;
+    max-height: 385px;
   }
 }
 
