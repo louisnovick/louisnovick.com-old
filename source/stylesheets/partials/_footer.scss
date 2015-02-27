@@ -28,11 +28,15 @@
 
 .footer {
   ///////////////////////////////////////////////////////////////////////////////////
-  $base-spacing: 1.5em !default;
+  $base-spacing: 1.5em 1.5em 3.6em 1.5em !default;
   $base-accent-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   
+  .left-links {
+    float: left;
+  }
+
   ul {
     margin: 0;
     padding: 0;
