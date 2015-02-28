@@ -16,6 +16,38 @@ $(function() {
   });
 });
 
+//nav fade.  Only if browser is greater than 600px onload.
+$(function() {
+  if(window.innerWidth >= 600) {
+    $(window).scroll(function(){
+      var scrollTop = $(window).scrollTop();
+      if(scrollTop > 0)
+        $('.navigation').stop().animate({'opacity':'0.4'},400);
+      else  
+        $('.navigation').stop().animate({'opacity':'1'},400);
+    });
+    
+    $('.navigation').hover(
+      function (e) {
+        var scrollTop = $(window).scrollTop();
+        if(scrollTop != 0){
+          $('.navigation').stop().animate({'opacity':'1'},400);
+        }
+      },
+      function (e) {
+        var scrollTop = $(window).scrollTop();
+        if(scrollTop != 0){
+          $('.navigation').stop().animate({'opacity':'0.4'},400);
+        }
+      }
+    );
+  }
+  else {
+    return false;
+  }
+});
+
+
 var $event = $.event,
 $special,
 resizeTimeout;
