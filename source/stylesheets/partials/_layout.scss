@@ -101,9 +101,8 @@ $navigation-height: 87px;
     background-color: $lightblue;
     li {
       display: inline-block;
-      margin: 10px 5px 0 5px;
+      margin: 10px 5px 10px 5px;
       vertical-align: top;
-      height: 250px;
       max-height: 700px;
       > a {
         border: none;
@@ -185,12 +184,15 @@ $navigation-height: 87px;
   overflow: hidden;
   max-height: 400px;
   @include media(max-width 526px) {
-    max-height: 385px;
+    max-height: 100%;
   }
 }
 
 .work-expander-inner {
   padding: 30px 30px;
+  @include media(max-width 526px) {
+    padding: 0px;
+  }
   height: 100%;
 }
 
@@ -337,7 +339,7 @@ $navigation-height: 87px;
 @media screen and (max-width: 650px) {
 
 	.work-fullimg { display: none; }
-	.work-details { float: none; width: 100%; }
+	.work-details { float: none; width: 100%; padding: 30px;}
 	
 }
 
