@@ -19,15 +19,7 @@ $navigation-height: 95px;
 
 .content {
 	padding-top: $navigation-height;
-}
-
-//for plus sign rotation
-.rotated {
-  transform: rotate(90deg);
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -moz-transform: rotate(90deg); /* Firefox */
-  -webkit-transform: rotate(90deg); /* Safari and Chrome */
-  -o-transform: rotate(90deg); /* Opera */
+  background-color: $blue;
 }
 
 .blogmain {
@@ -45,6 +37,7 @@ $navigation-height: 95px;
       font-size: 2.2em;
       font-family: $base-font-family;
       margin: 0;
+      padding-bottom: 15px;
     }
     .blogexc {
       padding: 10px 0;
@@ -57,20 +50,19 @@ $navigation-height: 95px;
     @include media(max-width 769px) {
        @include span-columns(12);
        text-align: left;
-       padding-top: 30px;
        border-top: 1px solid $blue;
        margin-top: 30px;
-       padding-top: 20px 0;
+       padding: 20px 0;
     }
     .posttitle { 
-      @include span-columns(7); 
+      @include span-columns(6); 
       font-size: 1.1em;
       @include media(max-width 769px) {
         font-size: .9em;
       }
     }
     .datetime { 
-      @include span-columns(5); 
+      @include span-columns(6); 
       font-size: 1.1em;
       @include media(max-width 769px) {
         font-size: .9em;
@@ -80,10 +72,7 @@ $navigation-height: 95px;
       font-size: 2.2em;
       font-family: $base-font-family;
       margin: 0;
-      @include media(min-width 769px) {
-        position: relative;
-        left: 10px;
-      }
+      padding-bottom: 15px;
     }
   }
 }
@@ -341,6 +330,30 @@ $navigation-height: 95px;
 	.work-fullimg { display: none; }
 	.work-details { float: none; width: 100%; padding: 30px;}
 	
+}
+
+.aboutme {
+  @include outer-container;
+  padding: 50px;
+  h3 {
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+  h5 {
+    text-align: center;
+    font-size: 1.3em;
+    font-family: $paragraph-font;
+  }
+  p {
+    font-size: 1.2em;
+    max-width: 800px;
+    width: 100%;
+    padding: 25px 0;
+    margin: 0px auto;
+  }
+
 }
 
 //devskills
