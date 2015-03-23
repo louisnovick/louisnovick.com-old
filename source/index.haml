@@ -12,12 +12,11 @@ description: Web Design and Development || Orlando, FL.
 		= link_to 'Read It', post.url, class: 'btn'
 	%div.blogsection
 		%p.label Blog
-		- get_posts().drop( 1 ).each do | post |
-			%h3 Blog Posts
-		.posttitle
-			= link_to post.data.title, post.url
-		.datetime
-			%time= pretty_date( post.data.date )
+		- get_posts().drop( 0 ).each do | post |
+			.posttitle
+				= link_to post.data.title, post.url
+			.datetime
+				%time= pretty_date( post.data.date )
 
 .worksection
 	%ul#work-grid.work-grid

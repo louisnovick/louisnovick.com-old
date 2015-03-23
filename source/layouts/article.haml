@@ -7,6 +7,8 @@
 
 		= partial 'shared/nav'
 
+		%input{:onclick => "history.back(-1)", :type => "button", :value => "Back", :id => "back"}/
+
 		%section.article_header
 			%h1= current_page.data.title
 			%time= pretty_date( current_page.data.date )

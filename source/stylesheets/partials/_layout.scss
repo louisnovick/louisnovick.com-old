@@ -24,9 +24,11 @@ $navigation-height: 95px;
 
 .blogmain {
   @include outer-container;
+  max-width: 65em;
   padding: 4%;
   .latestpost { 
-    @include span-columns(6);
+    @include span-columns(5);
+    margin-right: 10.35765%;
     @include media(max-width 769px) {
       @include span-columns(12);
     }
@@ -55,15 +57,21 @@ $navigation-height: 95px;
        padding: 20px 0;
     }
     .posttitle { 
-      @include span-columns(6); 
+      @include span-columns(7); 
       font-size: 1.1em;
+      text-align: left;
+      padding-bottom: 5px;
+      margin-right: 0;
       @include media(max-width 769px) {
         font-size: .9em;
       }
     }
     .datetime { 
-      @include span-columns(6); 
+      @include span-columns(5);
+      margin-right: 0; 
+      text-align: right;
       font-size: 1.1em;
+      padding-bottom: 5px;
       @include media(max-width 769px) {
         font-size: .9em;
       }
