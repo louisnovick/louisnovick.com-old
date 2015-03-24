@@ -26,6 +26,9 @@ $navigation-height: 95px;
   @include outer-container;
   max-width: 65em;
   padding: 4%;
+  @include media(max-width 860px) {
+    margin-top: 30px;
+  }
   .latestpost { 
     @include span-columns(5);
     margin-right: 10.35765%;
