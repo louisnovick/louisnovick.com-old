@@ -520,6 +520,33 @@ $(function() {
     });
 });
 
+//tooltips
+!function($){
+    $(function(){
+    
+        $("li[title]").hover(function(e){
+            var $this    = $(this),
+                $tooltip = $("<div class=\"tooltip\">"),
+                pos      = $this.position();
+            
+            $("body").append($tooltip);
+            
+            $tooltip.text($this.attr("title")).css({
+              top: pos.top - $tooltip.outerHeight()-5,
+              left: pos.left + ($this.outerWidth() - $tooltip.outerWidth())*.5
+            });
+            $this.removeAttr("title").data("tooltip", $tooltip);
+            
+        },function(e){
+            var $this = $(this);
+        
+            $this.attr("title", $this.data("tooltip").text()).data("tooltip").remove();
+        
+        });
+    
+    });
+}(jQuery);
+
 
 
 

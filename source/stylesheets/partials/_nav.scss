@@ -80,6 +80,9 @@ header.navigation {
   height: 50%;
   max-height: 310px;
   @include animation(bgscroll 180s infinite linear);
+  @include media(max-width 480px) {
+      max-height: 330px;
+  }
 }
 
 .hero {  
@@ -95,14 +98,11 @@ header.navigation {
   $hero-background-bottom: #20392B;
   $hero-color: $dark-gray;
   $gradient-angle: 10deg;
-  //$hero-image: 'https:raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 
-  //@include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
   background: $blue;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  //padding-bottom: 3em;
 
   .hero-logo img {
     height: 7em;

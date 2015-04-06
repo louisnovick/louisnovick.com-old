@@ -2,6 +2,9 @@
 	#back {
 		position: relative;
 		top: 10px;
+		@include media(max-width 480px) {
+     		top: 35px;
+  		}
 	}
 	.main-content {
 		max-width: 900px;

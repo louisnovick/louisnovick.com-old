@@ -91,6 +91,16 @@ $navigation-height: 95px;
 
 .worksection {
   background-color: $lightblue;
+  padding: 40px 0;
+  .worktitle {
+    text-align: center;
+    padding: 20px;
+  }
+  h3 {
+      font-size: 2.5em;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+  }
   .work-grid {
     list-style: none;
     padding: 40px 0;
@@ -104,6 +114,19 @@ $navigation-height: 95px;
       margin: 10px 5px 10px 5px;
       vertical-align: top;
       max-height: 700px;
+      a.githublink {
+        border: none;
+        margin: 0;
+        position: absolute;
+        font-size: 10rem;
+        bottom: 0;
+        right: 0;
+        &::before {
+            content: '';
+            display: inline-block;
+            margin: 0;
+        }
+      }
       > a {
         border: none;
         outline: none;
@@ -126,7 +149,7 @@ $navigation-height: 95px;
             margin: 0px auto;
             h3 {
               font-size: 1.5em;
-              line-height: 20px;
+              line-height: 25px;
             }
             p {
               position: relative;
@@ -141,7 +164,7 @@ $navigation-height: 95px;
           width: 65px;
           position: absolute;
           height: 65px;
-          bottom: 40px;
+          bottom: 17px;
           left: 93px;
         }
         div.circle {
@@ -151,7 +174,7 @@ $navigation-height: 95px;
           width: 70px;
           position: absolute;
           height: 70px;
-          bottom: 38px;
+          bottom: 15px;
           left: 90px;
         }
       }
@@ -368,7 +391,6 @@ $navigation-height: 95px;
 }
 
 //devskills
-
 .devskills {
   @include size(auto auto);
   background-color: #9FBCBF;
@@ -403,3 +425,33 @@ $navigation-height: 95px;
   }
 }
 
+/*ie*/  .ie .devskills ul{max-width:56.25em !important;}
+
+.tooltip {
+    background: $dark-gray;
+    border-radius: 20px;
+    color: $lightblue;
+    -webkit-box-shadow:0 0 0 1px rgba(0,0,0,.5);
+    -moz-box-shadow:0 0 0 1px rgba(0,0,0,.5);
+    box-shadow:0 0 0 1px rgba(0,0,0,.5);
+    position:absolute;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-family: $paragraph-font;
+}
+.tooltip:before,
+.tooltip:after {
+    content:'';
+    border-style:solid;
+    border-width:6px 6px 0;
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-6px;
+}
+.tooltip:before {
+    border-color: $dark-gray transparent transparent;
+}
+.tooltip:after {
+    border-color: $dark-gray transparent transparent;
+}

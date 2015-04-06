@@ -19,6 +19,7 @@ description: Web Design and Development || Orlando, FL.
 				%time= pretty_date( post.data.date )
 
 .worksection
+	%h3.worktitle Some of my previous work
 	%ul#work-grid.work-grid
 		%li
 			%a{:href => "http://cpricelawfirm.com/", "data-description" => "Price Law Firm, a bankruptcy and foreclosure law firm in Orlando, Florida was in need of a new website.  I was in charge of developing the site and laying out the content based on the design provided.", "data-largesrc" => "images/price.jpg", "data-title" => "Price Law Firm"}
@@ -76,6 +77,14 @@ description: Web Design and Development || Orlando, FL.
 						%p Super Hero 5k
 				.circle
 				.arrow
+		%li
+			%a{:href => "http://sulley.cah.ucf.edu/~mi249120/dig4104c/p2/#/", "data-description" => "Using middleman and angular.js, I aided in the development of this dynamic application which takes the user on a journey through Darwin's journey on the HMS Beagle. <a href='https://github.com/louisnovick/Darwins-Journey' class='githublink' target='_blank'> <img alt='Github' src='../../images/thumbs/github.svg'> </a>", "data-largesrc" => "images/darwin.jpg", "data-title" => "Voyage of the HMS Beagle"}
+				.work_cir
+					.cir_text
+						%h3 Voyage of the HMS Beagle
+						%p Learn About the Famous Voyage
+				.circle
+				.arrow
 
 .aboutme
 	%h3 Web Development is my passion. 
@@ -91,47 +100,47 @@ description: Web Design and Development || Orlando, FL.
 .devskills#skills
 	%h3 Things I have worked with
 	%ul
-		%li.skill
+		%li{:class => "skill", :title => "Git"}
 			&#xe602;
-		%li.skill
+		%li{:class => "skill", :title => "Ruby"}
 			&#xe639;
-		%li.skill
+		%li{:class => "skill", :title => "Ruby on Rails"}
 			&#xe63b;
-		%li.skill
+		%li{:class => "skill", :title => "PHP"}
 			&#xe63d;
-		%li.skill
+		%li{:class => "skill", :title => "mySQL"}
 			&#xe604;
-		%li.skill
+		%li{:class => "skill", :title => "JavaScript"}
 			&#xe64e;
-		%li.skill
+		%li{:class => "skill", :title => "Angular"}
 			&#xe653;
-		%li.skill
+		%li{:class => "skill", :title => "jQuery"}
 			&#xe650;
-		%li.skill
+		%li{:class => "skill", :title => "Node"}
 			&#xe619;
-		%li.skill
+		%li{:class => "skill", :title => "SCSS"}
 			&#xe64b;
-		%li.skill
+		%li{:class => "skill", :title => "CSS3"}
 			&#xe649;
-		%li.skill
+		%li{:class => "skill", :title => "HTML5"}
 			&#xe636;
-		%li.skill
+		%li{:class => "skill", :title => "Ghost"}
 			&#xe61f;
-		%li.skill
+		%li{:class => "skill", :title => "Wordpress"}
 			&#xe60b;
-		%li.skill
+		%li{:class => "skill", :title => "Grunt"}
 			&#xe64c;
-		%li.skill
+		%li{:class => "skill", :title => "Bower"}
 			&#xe64d;
-		%li.skill
+		%li{:class => "skill", :title => "Node Package Manager"}
 			&#xe61e;
-		%li.skill
+		%li{:class => "skill", :title => "Linux"}
 			&#xe63a;
-		%li.skill
+		%li{:class => "skill", :title => "Gulp"}
 			&#xe663;
-		%li.skill
+		%li{:class => "skill", :title => "Yeoman"}
 			&#xe67a;
-		%li.skill
+		%li{:class => "skill", :title => "iTerm"}
 			&#xe695;
 
 .contactsection#contact
