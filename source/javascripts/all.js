@@ -9,7 +9,7 @@ $(function() {
       if (target.length) {
         $('html,body').animate({
           scrollTop: target.offset().top
-        }, 500);
+        }, 1000);
         return false;
       }
     }
@@ -546,6 +546,17 @@ $(function() {
     
     });
 }(jQuery);
+
+$(document).ready(function(){
+  $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart',function (e) {
+    $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
+    e.preventDefault();
+  });
+  $('.js-menu a').click(function(){
+    $('.sliding-panel-content,.sliding-panel-fade-screen').removeClass('is-visible');
+  });
+});
+
 
 
 

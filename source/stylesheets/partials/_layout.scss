@@ -206,6 +206,7 @@ $navigation-height: 95px;
   height: 0;
   overflow: hidden;
   max-height: 400px;
+  box-shadow: 0px 10px #1f1f1f;
   @include media(max-width 526px) {
     max-height: 100%;
   }

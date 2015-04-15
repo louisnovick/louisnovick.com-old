@@ -3,7 +3,7 @@ title: Home
 description: Web Design and Development || Orlando, FL.
 ---
 
-%section.blogmain
+%section.blogmain#top
 	%div.latestpost
 		- post = get_posts().first
 		%p.label Latest Post
@@ -18,7 +18,7 @@ description: Web Design and Development || Orlando, FL.
 			.datetime
 				%time= pretty_date( post.data.date )
 
-.worksection
+.worksection#work
 	%h3.worktitle Some of my previous work
 	%ul#work-grid.work-grid
 		%li
@@ -85,8 +85,16 @@ description: Web Design and Development || Orlando, FL.
 						%p Learn About the Famous Voyage
 				.circle
 				.arrow
+		%li
+			%a{:href => "http://cullen-hemphill.com", "data-description" => "Cullen Hemphill LLP needed a modern responsive website that presents their clients with clear and easily understandable content.  Content that users could later reference when trying to learn more about what to do in the event of an accident or being charged with a crime.  I utilized Wordpress to Develop their site and organize their content.", "data-largesrc" => "images/cullenh.jpg", "data-title" => "Cullen Hemphill LLP"}
+				.work_cir
+					.cir_text
+						%h3 Cullen Hemphill LLP
+						%p Criminal Defense/Personal Injury
+				.circle
+				.arrow
 
-.aboutme
+.aboutme#about
 	%h3 Web Development is my passion. 
 	%h5 I also love Coffee, Gaming and Traveling.
 	%p 
@@ -102,6 +110,8 @@ description: Web Design and Development || Orlando, FL.
 	%ul
 		%li{:class => "skill", :title => "Git"}
 			&#xe602;
+		%li{:class => "skill", :title => "Bitbucket"}
+			&#xe603;
 		%li{:class => "skill", :title => "Ruby"}
 			&#xe639;
 		%li{:class => "skill", :title => "Ruby on Rails"}
@@ -110,6 +120,12 @@ description: Web Design and Development || Orlando, FL.
 			&#xe63d;
 		%li{:class => "skill", :title => "mySQL"}
 			&#xe604;
+		%li{:class => "skill", :title => "MongoDB"}
+			&#xe6a4;
+		%li{:class => "skill", :title => "Google Analytics"}
+			&#xe660;
+		%li{:class => "skill", :title => "Heroku"}
+			&#xe67b;
 		%li{:class => "skill", :title => "JavaScript"}
 			&#xe64e;
 		%li{:class => "skill", :title => "Angular"}
@@ -124,6 +140,8 @@ description: Web Design and Development || Orlando, FL.
 			&#xe649;
 		%li{:class => "skill", :title => "HTML5"}
 			&#xe636;
+		%li{:class => "skill", :title => "Responsive Design & Development"}
+			&#xe697;	
 		%li{:class => "skill", :title => "Ghost"}
 			&#xe61f;
 		%li{:class => "skill", :title => "Wordpress"}
