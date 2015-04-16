@@ -27,6 +27,7 @@ header.navigation {
   width: 100%;
   z-index: 999;
   position: fixed;
+  box-shadow: 0 5px $darkest;
 
   .navigation-wrapper {
     @include clearfix;
@@ -107,6 +108,11 @@ header.navigation {
   .hero-logo img {
     height: 7em;
     border-radius: 100px;
+    border: 3px solid rgba(47, 55, 56, 0.6);
+    @include transition(all 0.5s ease-in-out);
+    &:hover {
+      border: 3px solid rgba(47, 55, 56, 1);  
+    }
   }
 
   .hero-inner {
@@ -147,78 +153,6 @@ header.navigation {
       @include button(flat, $base-accent-color);
       padding: 0.7em 1em;
     }
-  }
-}
-
-.sliding-panel-content {  
-  $action-color: #477DCA !default;
-  $sliding-panel-border-color: $dark-gray;
-  $sliding-panel-background: $dark-gray;
-  $sliding-panel-color: #fff;
-  $sliding-panel-border: 1px solid $sliding-panel-border-color;
-  $sliding-panel-background-hover: $action-color;
-  $sliding-panel-color-hover: #fff;
-  $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
-
-  @include position(fixed, 0px auto 0px 0px);
-  @include size(220px 100%);
-  @include transform(translateX(-220px));
-  @include transition(all 0.25s linear);
-  background: $sliding-panel-background;
-  z-index: 999999;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  li a {
-    color: $sliding-panel-color;
-    display: block;
-    padding: 1em;
-    text-decoration: none;
-    font-size: 1.1rem;
-
-    &:focus {
-      background-color: $sliding-panel-background-focus;
-    }
-
-    &:hover {
-      background-color: $sliding-panel-background-hover;
-      color: $dark-gray;
-    }
-  }
-
-  &.is-visible {
-    @include transform(translateX(0));
-  }
-}
-
-.sliding-panel-fade-screen {
-  @include position(fixed, 0px 0px 0px 0px);
-  @include transition;
-  background: $dark-gray;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 999998;
-
-  &.is-visible {
-    opacity: 0.4;
-    visibility: visible;
-  }
-}
-
-.js-menu {
-   a.logo img {
-    max-height: 100px;
-    width: 100%;
-    margin: 25px 0;
   }
 }
 

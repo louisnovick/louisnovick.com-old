@@ -549,11 +549,12 @@ $(function() {
 
 $(document).ready(function(){
   $('.sliding-panel-button,.sliding-panel-fade-screen,.sliding-panel-close').on('click touchstart',function (e) {
-    $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible');
+    $('.sliding-panel-content,.sliding-panel-fade-screen').toggleClass('is-visible').css('box-shadow', '0px 0px 0px 5px #1f1f1f');
     e.preventDefault();
   });
   $('.js-menu a').click(function(){
     $('.sliding-panel-content,.sliding-panel-fade-screen').removeClass('is-visible');
+    $('.sliding-panel-content,.sliding-panel-fade-screen').css('box-shadow', '0px 0px 0px 0px #1f1f1f');
   });
 });
 
