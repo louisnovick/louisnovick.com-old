@@ -1,21 +1,21 @@
 %header.navigation{:role => "banner"}
 	.navigation-wrapper
 		%a.logo.js-menu-trigger.sliding-panel-button{:href => "/"} 	
-			%img{:alt => "Louis Novick Web Development and Design", :src => "../../images/logo.svg\n"}/
+			%img{:alt => "Louis Novick Web Development and Design", :src => "../../images/logo.svg\n", :class => "svg-inject"}/
 		%nav{:role => "navigation"}
 			%ul.socialnav
 				%li.nav-link
 					%a{:href => "http://www.twitter.com/louisnovick", :target => "_blank"} 
-						%img{:alt => "Twitter", :src => "../../images/thumbs/twitter.svg\n", :onerror => "this.src='twitter.png'"}/
+						%img{:alt => "Twitter", :src => "../../images/thumbs/twitter.svg\n", :class => "svg-inject"}/
 				%li.nav-link
 					%a{:href => "http://www.github.com/louisnovick", :target => "_blank"} 
-						%img{:alt => "Github", :src => "../../images/thumbs/github.svg\n"}/
+						%img{:alt => "Github", :src => "../../images/thumbs/github.svg\n", :class => "svg-inject"}/
 				%li.nav-link
 					%a{:href => "http://www.dribbble.com/louisnovick", :target => "_blank"} 
-						%img{:alt => "Dribbble", :src => "../../images/thumbs/dribbble.svg\n"}/
+						%img{:alt => "Dribbble", :src => "../../images/thumbs/dribbble.svg\n", :class => "svg-inject"}/
 %nav.js-menu.sliding-panel-content
 	%a.logo{:href => "#top"} 	
-		%img{:alt => "Louis Novick Web Development and Design", :src => "../../images/logo.svg\n"}/
+		%img{:alt => "Louis Novick Web Development and Design", :src => "../../images/logo.svg\n", :class => "svg-inject", :style => "width: 100%; height: 120px; margin: 30px 0;"}/
 	%ul
 		%li
 			%a{:href => "/#work"} Work
@@ -28,7 +28,6 @@
 .js-menu-screen.sliding-panel-fade-screen
 
 .content#top
-	.clouds
 	.hero
 		.hero-inner
 			.hero-logo{:href => ""}

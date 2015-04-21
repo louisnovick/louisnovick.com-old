@@ -1,0 +1,14 @@
+%section.blogmain#top
+	%div.latestpost
+		- post = get_posts().first
+		%p.label Latest Post
+		= link_to post.data.title, post.url, class: 'latestpost_title'
+		%p.blogexc= post.data.description
+		= link_to 'Read It', post.url, class: 'btn'
+	%div.blogsection
+		%p.label Blog
+		- get_posts().drop( 0 ).each do | post |
+			.posttitle
+				= link_to post.data.title, post.url
+			.datetime
+				%time= pretty_date( post.data.date )

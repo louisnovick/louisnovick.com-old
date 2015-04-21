@@ -1,0 +1,65 @@
+.blogmain {
+  @include outer-container;
+  max-width: 65em;
+  padding: 4%;
+  @include media(max-width 860px) {
+    margin-top: 30px;
+  }
+  .latestpost { 
+    @include span-columns(5);
+    margin-right: 10.35765%;
+    @include media(max-width 769px) {
+      @include span-columns(12);
+    }
+    .latestpost_title {
+      font-size: 1.2em;
+    }
+    .label {
+      font-size: 2.2em;
+      font-family: $base-font-family;
+      margin: 0;
+      padding-bottom: 15px;
+    }
+    .blogexc {
+      padding: 10px 0;
+    }
+  }
+  .blogsection {
+    text-align: center;
+    position: relative;
+    @include span-columns(6);
+    @include media(max-width 769px) {
+       @include span-columns(12);
+       text-align: left;
+       border-top: 1px solid $blue;
+       margin-top: 30px;
+       padding: 20px 0;
+    }
+    .posttitle { 
+      @include span-columns(7); 
+      font-size: 1.1em;
+      text-align: left;
+      padding-bottom: 5px;
+      margin-right: 0;
+      @include media(max-width 769px) {
+        font-size: .9em;
+      }
+    }
+    .datetime { 
+      @include span-columns(5);
+      margin-right: 0; 
+      text-align: right;
+      font-size: 1.1em;
+      padding-bottom: 5px;
+      @include media(max-width 769px) {
+        font-size: .9em;
+      }
+    }
+    .label {
+      font-size: 2.2em;
+      font-family: $base-font-family;
+      margin: 0;
+      padding-bottom: 15px;
+    }
+  }
+}

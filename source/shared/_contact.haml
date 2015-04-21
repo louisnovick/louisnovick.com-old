@@ -1,0 +1,16 @@
+.contactsection#contact
+	.formcontain
+		%p Drop me a line if you have any questions or just want to talk!  
+		%form{:action => "//formspree.io/louis@louisnovick.com", :method => "POST", :id => "contactForm"}
+			%label{:for => "name"}
+				Name
+				%input{:type => "text", :name => "name", :class => "input_text", :required => true}
+			%label{:for => "email"}
+				Email
+				%input{:name => "_replyto", :type => "email", :required => true}
+			%label{:for => "message"}
+				Message
+				%textarea{:name => "message"}
+			%input{:name => "_subject", :type => "hidden", :value => "New contact form submission!"}/
+			%input{:name => "_gotcha", :style => "display:none", :type => "text"}/
+			%input{:type => "submit", :value => "Send"}

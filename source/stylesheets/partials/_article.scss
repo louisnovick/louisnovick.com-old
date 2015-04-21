@@ -1,10 +1,12 @@
 .blog {
 	#back {
 		position: relative;
-		top: 10px;
-		@include media(max-width 480px) {
-     		top: 35px;
-  		}
+		background: $dark-gray;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		&:hover {
+			color: $lightblue;
+		}
 	}
 	.main-content {
 		max-width: 900px;

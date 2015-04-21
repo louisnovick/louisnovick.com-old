@@ -1,5 +1,25 @@
 //= require_tree .
 
+
+//SVG injection
+var injectSVG = document.querySelectorAll('img.svg-inject');
+
+// Options
+var injectorOptions = {
+  evalScripts: 'once',
+  pngFallback: '../images/png/png',
+  each: function (svg) {
+    //Callback after each SVG is injected
+    //console.log('SVG injected: ' + svg.getAttribute('id'));
+  }
+};
+
+// Trigger the injection
+SVGInjector(injectSVG, injectorOptions, function (totalSVGsInjected) {
+  // Callback after all SVGs are injected
+  //console.log('We injected ' + totalSVGsInjected + ' SVG(s)!');
+});
+
 //smooth scroll
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -15,38 +35,6 @@ $(function() {
     }
   });
 });
-
-//nav fade.  Only if browser is greater than 600px onload.
-$(function() {
-  if(window.innerWidth >= 600) {
-    $(window).scroll(function(){
-      var scrollTop = $(window).scrollTop();
-      if(scrollTop > 0)
-        $('.navigation').stop().animate({'opacity':'0.4'},400);
-      else  
-        $('.navigation').stop().animate({'opacity':'1'},400);
-    });
-    
-    $('.navigation').hover(
-      function (e) {
-        var scrollTop = $(window).scrollTop();
-        if(scrollTop != 0){
-          $('.navigation').stop().animate({'opacity':'1'},400);
-        }
-      },
-      function (e) {
-        var scrollTop = $(window).scrollTop();
-        if(scrollTop != 0){
-          $('.navigation').stop().animate({'opacity':'0.4'},400);
-        }
-      }
-    );
-  }
-  else {
-    return false;
-  }
-});
-
 
 var $event = $.event,
 $special,

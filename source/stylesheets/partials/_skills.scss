@@ -1,0 +1,65 @@
+//devskills
+.devskills {
+  @include size(auto auto);
+  background-color: #9FBCBF;
+  padding: 3% 10%;
+  h3 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2.5em;
+    text-transform: capitalize;
+  }
+  ul {
+    @include outer-container;
+    li.skill {
+      position: relative;
+      width: 19.52%;;
+      font-family: 'devicons';
+      display: inline-block;
+      font-size: 5em;
+      cursor: default;
+      color: #2F3738;
+      text-align: center;
+      @include media(max-width 1122px) {
+        width: 24%;
+      }
+      @include media(max-width 480px) {
+        width: 30%;
+      }
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+/*ie*/  .ie .devskills ul{max-width:56.25em !important;}
+
+.tooltip {
+    background: $dark-gray;
+    border-radius: 20px;
+    color: $lightblue;
+    -webkit-box-shadow:0 0 0 1px rgba(0,0,0,.5);
+    -moz-box-shadow:0 0 0 1px rgba(0,0,0,.5);
+    box-shadow:0 0 0 1px rgba(0,0,0,.5);
+    position:absolute;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-family: $paragraph-font;
+}
+.tooltip:before,
+.tooltip:after {
+    content:'';
+    border-style:solid;
+    border-width:6px 6px 0;
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-6px;
+}
+.tooltip:before {
+    border-color: $dark-gray transparent transparent;
+}
+.tooltip:after {
+    border-color: $dark-gray transparent transparent;
+}
