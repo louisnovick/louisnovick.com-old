@@ -33,6 +33,6 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  #deploy.remote   = 'git@github.com:louisnovick/louisnovick.github.io.git' # remote name or git url, default: origin
   deploy.branch   = 'master' 
 end
