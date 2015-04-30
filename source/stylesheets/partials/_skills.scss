@@ -1,7 +1,7 @@
 //devskills
 .devskills {
   @include size(auto auto);
-  background-color: #9FBCBF;
+  @include background(linear-gradient($lightblue, $blue) left repeat);
   padding: 3% 10%;
   h3 {
     text-align: center;

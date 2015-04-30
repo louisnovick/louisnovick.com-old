@@ -16,8 +16,9 @@ var injectorOptions = {
 
 // Trigger the injection
 SVGInjector(injectSVG, injectorOptions, function (totalSVGsInjected) {
-  // Callback after all SVGs are injected
+  //Callback after all SVGs are injected
   //console.log('We injected ' + totalSVGsInjected + ' SVG(s)!');
+  $('img.svg-inject').css('display', 'block');
 });
 
 //smooth scroll

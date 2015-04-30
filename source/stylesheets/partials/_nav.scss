@@ -57,24 +57,68 @@ header.navigation {
 
   .logo {
     float: left;
-    img, svg {
+    svg {
       width: 115px;
       height: 65px;
       display: block;
+      #Layer_1_1_ path:nth-child(2) {
+        @include animation(bounceInUp 2.5s);
+      }
     }
   }  
 }
 
+@-webkit-keyframes bounceInUp { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(2000px); 
+    } 
+    60% { 
+        opacity: 1; 
+        -webkit-transform: translateY(-30px); 
+    } 
+    80% { 
+        -webkit-transform: translateY(10px);
+    } 
+    100% { 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes bounceInUp { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(2000px); 
+    } 
+    60% { 
+        opacity: 1; 
+        transform: translateY(-30px); 
+    } 
+    80% { 
+        transform: translateY(10px); 
+    } 
+    100% { 
+        transform: translateY(0); 
+    } 
+} 
+
+.animated { 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-timing-function: ease-in-out; 
+    animation-timing-function: ease-in-out; 
+} 
 
 $navigation-height: 100px;
 
 .content {
   padding-top: $navigation-height;
   background-image: url('../../images/pattern.svg');
-  background-position: top;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-color: $lightblue;
 }
 
 .hero {  
