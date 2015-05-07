@@ -6,42 +6,68 @@
   .rocket {
     svg {
       position: relative;
-      -webkit-transition: 1.5s;
+      @include transition(all 1.5s ease-in-out);
       height: 400px;
       width: 100%;
       margin-top: -120px;
-      -webkit-animation: flying 2s infinite;
+      @include animation(flying 2.0s infinite);
       path:nth-child(1), path:nth-child(2) {
         opacity: 1;
-        -webkit-transition: 2s;
-        -webkit-animation: flames 5s infinite;
+        @include transition(all 2.0s ease-in-out);
+        @include animation(flames 5.0s infinite);
       }
     }
     
 
     @-webkit-keyframes flying {
       0% {
-        transform: translateY(0px);
+        @include transform(translateY(0px));
       }
       50% {
-        transform: translateY(-15px);
+        @include transform(translateY(-15px));
       }
       100% {
-        transform: translateY(0px);
+        @include transform(translateY(0px));
+      }
+    }
+
+    @keyframes flying {
+      0% {
+        @include transform(translateY(0px));
+      }
+      50% {
+        @include transform(translateY(-15px));
+      }
+      100% {
+        @include transform(translateY(0px));
       }
     }
 
     @-webkit-keyframes flames {
       0% {
-        transform: rotateX(0deg);
+        @include transform(rotateX(0deg));
       }
       
       50% {
-        transform: rotateX(8deg);
+        @include transform(rotateX(8deg));
       }
       
       100% {
-        transform: rotateX(0deg);
+        @include transform(rotateX(0deg));
+      }
+    }
+
+    @keyframes flames {
+      0% {
+        @include transform(rotateX(0deg));
+      }
+      
+      50% {
+        @include transform(rotateX(8deg));
+      }
+      
+      100% {
+        @include transform(rotateX(0deg));
       }
     }
   }
