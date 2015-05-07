@@ -1,6 +1,8 @@
 .aboutme {
   @include outer-container;
+  max-width: 100% !important;
   padding: 50px;
+  @include background(linear-gradient($darkest, $dark-gray) left repeat);
   .rocket {
     svg {
       position: relative;
@@ -44,6 +46,7 @@
     }
   }
   .aboutcontent {
+    color: $lightblue;
     h3 {
       text-align: center;
       font-size: 2.5em;
@@ -56,7 +59,7 @@
       font-family: $paragraph-font;
     }
     p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       max-width: 800px;
       width: 100%;
       padding: 25px 0;
