@@ -8,8 +8,8 @@
   $sliding-panel-color-hover: #fff;
   $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 
-  @include position(relative, 0px auto 0px 0px);
-  @include size(20% 100%);
+  @include position(fixed, 0px auto 0px 0px);
+  @include size(200px 100%);
   @include transform(translateX(-220px));
   @include transition(all 0.25s linear);
   background: $sliding-panel-background;

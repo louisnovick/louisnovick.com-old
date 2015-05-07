@@ -7,6 +7,8 @@
 
 		= partial 'shared/articlenav'
 
+		= partial 'shared/hero'
+
 		%input{:onclick => "history.back(-1)", :type => "button", :value => "Back", :id => "back"}/
 
 		%section.article_header
@@ -18,11 +20,7 @@
 
 			= yield
 
-			.addthis_native_toolbox
-
 		= partial 'shared/footer'
 
 		= partial 'shared/js'
-
-		%script{:async => "async", :src => "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5541a4b7774ab16c", :type => "text/javascript"}
 
