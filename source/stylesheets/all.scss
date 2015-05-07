@@ -3,18 +3,24 @@
 @import "bourbon";
 @import "base/base";  
 @import "neat";
+
 @import "partials/layout";
-@import "partials/footer";
+
 @import "partials/nav";
+@import "partials/slidingnav";
+
 @import "partials/hero";
 @import "partials/work";
-@import "partials/blog";
 @import "partials/about";
 @import "partials/skills";
-@import "partials/article";
 @import "partials/contact";
+
+@import "partials/article";
+@import "partials/blog";
 @import "partials/syntax";
-@import "partials/slidingnav";
+
+@import "partials/footer";
+
 
 
 
