@@ -27,7 +27,6 @@ header.navigation {
   width: 100%;
   z-index: 999;
   position: fixed;
-  box-shadow: 0 5px $darkest;
 
   .navigation-wrapper {
     @include clearfix;
