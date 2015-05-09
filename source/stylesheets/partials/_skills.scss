@@ -1,6 +1,6 @@
 //devskills
+
 .devskills {
-  @include size(auto auto);
   @include background(linear-gradient($lightblue, $blue) left repeat);
   padding: 3% 10%;
   h3 {
@@ -10,30 +10,21 @@
     text-transform: capitalize;
   }
   ul {
-    @include outer-container;
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
     li.skill {
-      position: relative;
-      width: 19.52%;;
       font-family: 'devicons';
-      display: inline-block;
       font-size: 5em;
+      margin: 20px;
       cursor: default;
       color: #2F3738;
-      text-align: center;
-      @include media(max-width 1122px) {
-        width: 24%;
-      }
-      @include media(max-width 480px) {
-        width: 30%;
-      }
       &:hover {
         color: #fff;
       }
     }
   }
 }
-
-/*ie*/  .ie .devskills ul{max-width:56.25em !important;}
 
 .tooltip {
     background: $dark-gray;
@@ -55,7 +46,7 @@
     position:absolute;
     top:100%;
     left:50%;
-    margin-left:-6px;
+    left: -6;
 }
 .tooltip:before {
     border-color: $dark-gray transparent transparent;
