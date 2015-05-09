@@ -30,9 +30,6 @@
     background: $dark-gray;
     border-radius: 20px;
     color: $lightblue;
-    -webkit-box-shadow:0 0 0 1px rgba(0,0,0,.5);
-    -moz-box-shadow:0 0 0 1px rgba(0,0,0,.5);
-    box-shadow:0 0 0 1px rgba(0,0,0,.5);
     position:absolute;
     padding: 10px 20px;
     margin-top: 20px;
@@ -46,7 +43,6 @@
     position:absolute;
     top:100%;
     left:50%;
-    left: -6;
 }
 .tooltip:before {
     border-color: $dark-gray transparent transparent;
