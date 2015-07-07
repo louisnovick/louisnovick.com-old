@@ -1,27 +1,15 @@
 !!! 5
 %html{ lang: 'en' }
 
-	= partial 'shared/header'
+	= partial 'shared/head'
 
-	%body{:class => page_classes}
-		.wrapper
-			= partial 'shared/nav'
+	%body
+		= partial 'shared/header'
 
-			= partial 'shared/hero'
-
-			= partial 'shared/blog'
-
-			= partial 'shared/work'
-
-			= partial 'shared/about'
-
-			= partial 'shared/skills'
-
-			= partial 'shared/contact'
-
-			= partial 'shared/footer'
-
-			= partial 'shared/js'
-
+		%main{ role: 'main' }
 			= yield
+
+		= partial 'shared/footer'
+
+		= partial 'shared/footer-scripts'
 

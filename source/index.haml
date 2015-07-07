@@ -3,6 +3,33 @@ title: Home
 description: Web Design and Development || Orlando, FL.
 ---
 
+%section.row.polybg
+	.cell
+		.g
+			.g-b.g-b--m--1of1
+				.well.well--l.well--m--xl
+					= link_to '/index.html' do
+						= image_tag 'louis.jpg', class: 'thumb mhc', alt: "Louis Novick Web Development", width: 140, height: 140
+					.tac
+						%h1.mts
+							Louis Novick
+						%p 
+							Web Developer, Designer, Student
+
+%section
+	%div
+		- post = get_posts().first
+		%p Latest Post
+		= link_to post.data.title, post.url
+		%p= post.data.description
+		= link_to 'Read It', post.url
+	%div
+		%p Blog
+		- get_posts().drop( 0 ).each do | post |
+			.posttitle
+				= link_to post.data.title, post.url
+			.datetime
+				%time= pretty_date( post.data.date )
 
 
 

@@ -7,6 +7,9 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    autoprefixer-rails (5.2.1)
+      execjs
+      json
     bitters (1.0.0)
       bourbon (>= 3.2)
       sass (>= 3.2)
@@ -66,6 +69,9 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
+    middleman-autoprefixer (2.5.0)
+      autoprefixer-rails (~> 5.2.0)
+      middleman-core (>= 3.3.3)
     middleman-bourbon (0.0.2)
       bourbon (>= 2.1.0)
     middleman-core (3.3.7)
@@ -158,6 +164,7 @@ PLATFORMS
 DEPENDENCIES
   bitters
   middleman (~> 3.3.7)
+  middleman-autoprefixer
   middleman-bourbon
   middleman-deploy (~> 1.0)
   middleman-livereload (~> 3.1.0)

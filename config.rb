@@ -1,9 +1,24 @@
+# ====================================
+#   Activate Plugins
+# ====================================
+
 activate :livereload
 activate :syntax
-activate :minify_html
-activate :bourbon
-activate :neat
 activate :directory_indexes
+
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer >= 10']
+  config.cascade = false
+end
+
+# ====================================
+#   Global Variables
+# ====================================
+
+# ----- Configuration ----- #
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 helpers do
   def get_posts
@@ -17,19 +32,30 @@ helpers do
   end
 end
 
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
+# ----- Paths ----- #
 
-set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+set :fonts_dir, 'assets/fonts'
+
+# ----- Site ----- #
+
+set :title, 'Louis Novick'
+
+# ====================================
+#   Build
+# ====================================
 
 configure :build do
   activate :minify_css
+  activate :minify_html
   activate :minify_javascript
   activate :asset_hash
   activate :relative_assets
 end
+
+# ----- Deploy ----- #
 
 activate :deploy do |deploy|
   deploy.method = :git

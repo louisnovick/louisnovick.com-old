@@ -1,26 +1,24 @@
 !!! 5
 %html{ lang: 'en' }
-
-	= partial 'shared/header'
+	= partial 'shared/head'
 
 	%body{:class => page_classes}
+		= partial 'shared/header'
+	
+		%main{ role: 'main' }
 
-		= partial 'shared/articlenav'
+			%input{:onclick => "history.back(-1)", :type => "button", :value => "Back", :id => "back"}/
 
-		= partial 'shared/hero'
-
-		%input{:onclick => "history.back(-1)", :type => "button", :value => "Back", :id => "back"}/
-
-		%section.article_header
-			%h1= current_page.data.title
-			%time= pretty_date( current_page.data.date )
+			%section
+				%h1= current_page.data.title
+				%time= pretty_date( current_page.data.date )
 
 
-		%section.main-content	
+			%section
 
-			= yield
+				= yield
 
 		= partial 'shared/footer'
 
-		= partial 'shared/js'
+		= partial 'shared/footer-scripts'
 
