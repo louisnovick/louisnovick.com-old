@@ -7,16 +7,20 @@
 	
 		%main{ role: 'main' }
 
-			%input{:onclick => "history.back(-1)", :type => "button", :value => "Back", :id => "back"}/
+			%section.row.polybg
+				.cell
+					.g
+						.g-b.g-b--m--4of4
+							.well.well--l
+								%h1= current_page.data.title
+								%time= pretty_date( current_page.data.date )
 
-			%section
-				%h1= current_page.data.title
-				%time= pretty_date( current_page.data.date )
-
-
-			%section
-
-				= yield
+			%section.row.bcs
+				.cell
+					.g
+						.g-b.g-b--m--4of4
+							.well.well--l
+								= yield
 
 		= partial 'shared/footer'
 

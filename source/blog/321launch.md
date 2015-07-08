@@ -6,8 +6,6 @@ date: 2015-02-18
 description: "My goal for this blog is to reflect on what I learn and to impart knowledge on anybody who will listen.  While I am not an expert in my field now I am 100% certain that I have the potential to be one someday."
 ---
 
-------------------
-
 ##Launch
 
 My goal for this blog is to reflect on what I learn and to impart knowledge on anybody who will listen.  While I am not an expert in my field now I am 100% certain that I have the potential to be one someday.  

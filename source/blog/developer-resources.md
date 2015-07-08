@@ -6,8 +6,6 @@ date: 2015-03-22
 description: "As a Web Developer I make it a point to try and learn something new about my craft each and everyday."
 ---
 
-------------------
-
 ## Practice Makes the Master
 
 As a Web Developer I make it a point to try and learn something new about my craft each and everyday.  I do this for a few reasons but let me start by stating something obvious.  If your knowledge of a particular subject, in this case web development, increases by 1% everyday than by the end of the year you will have become 365% better at web development.  I try to look at this daily “knowledge seeking” as a sort of compounding investment that continues to grow with each passing year.  This is part of the reason why I am confident I will become an expert someday.  
