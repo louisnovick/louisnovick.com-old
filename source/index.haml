@@ -12,21 +12,21 @@ description: Web Design and Development || Orlando, FL.
 					.tac.tct
 						%h1.mts
 							Louis Novick
-						%p 
+						.label.label--inverted 
 							Web Developer, Designer, Student
 
-%section.row.has-sector
+%section.row.has-sector.has-skew--m.bdrt
 	.cell
 		.g.sector.tci
 			.g-b.g-b--m--2of4.sector-item.sector-item--a
 				.well.well--l.well--m--xl
 					- post = get_posts().first
-					%p Latest Post
+					%h3.h1 Latest Post
 					= link_to post.data.title, post.url
 					%p= post.data.description
 					= link_to 'Read It', post.url
 			.g-b.g-b--m--2of4.sector-item.sector-item--b
-				.well.well--l.well--m--xl.plm--m
+				.well.well--l.well--m--xl.pls--m
 					- get_posts().drop( 0 ).each do | post |
 						.posttitle
 							= link_to post.data.title, post.url
