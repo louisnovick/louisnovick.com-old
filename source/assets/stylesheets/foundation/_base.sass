@@ -57,14 +57,16 @@ h4, .h4
 
 // ----- Links ----- //
 
-a
+a, %a
   color: $c-highlight
   text-decoration: none
+  font-weight: $b-fontWeight-normal
+  transition: $b-transition
 
   &:hover,
   &:focus
     border-bottom-color: $c-highlight
-    color: $c-subdue
+    color: $link--state-color
 
 // ----- Images ----- //
 

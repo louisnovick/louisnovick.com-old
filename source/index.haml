@@ -6,30 +6,32 @@ description: Web Design and Development || Orlando, FL.
 %section.row.polybg
 	.cell
 		.g
-			.g-b.g-b--m--1of1
-				.well.well--l.well--m--xl
-					= link_to '/index.html' do
-						= image_tag 'louis.jpg', class: 'thumb mhc', alt: "Louis Novick Web Development", width: 140, height: 140
-					.tac
+			.g-b.g-b--m--4of4
+				.well.well--l
+					= image_tag 'louis.jpg', class: 'thumb mhc', alt: "Louis Novick Web Development", width: 140, height: 140
+					.tac.tct
 						%h1.mts
 							Louis Novick
 						%p 
 							Web Developer, Designer, Student
 
-%section
-	%div
-		- post = get_posts().first
-		%p Latest Post
-		= link_to post.data.title, post.url
-		%p= post.data.description
-		= link_to 'Read It', post.url
-	%div
-		%p Blog
-		- get_posts().drop( 0 ).each do | post |
-			.posttitle
-				= link_to post.data.title, post.url
-			.datetime
-				%time= pretty_date( post.data.date )
+%section.row.has-sector
+	.cell
+		.g.sector.tci
+			.g-b.g-b--m--2of4.sector-item.sector-item--a
+				.well.well--l.well--m--xl
+					- post = get_posts().first
+					%p Latest Post
+					= link_to post.data.title, post.url
+					%p= post.data.description
+					= link_to 'Read It', post.url
+			.g-b.g-b--m--2of4.sector-item.sector-item--b
+				.well.well--l.well--m--xl.plm--m
+					- get_posts().drop( 0 ).each do | post |
+						.posttitle
+							= link_to post.data.title, post.url
+						.datetime
+							%time= pretty_date( post.data.date )
 
 
 

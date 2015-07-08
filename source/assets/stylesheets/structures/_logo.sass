@@ -1,20 +1,20 @@
 // *************************************
 //
-//   Row
-//   -> Width-spanning blocks
+//   Logo
+//   -> Brand mark
 //
 // -------------------------------------
 //   Template (Haml)
 // -------------------------------------
 //
-// .row
-//   / ...
+// %img.logo
 //
 // *************************************
 
-.row
-  overflow: hidden
-  padding: 0 $row-gutter
+.logo
+  height: $logo-size
+  width: $logo-size
 
   +respond-to($g-m)
-    padding: 0 $row-gutter-b
+    height: $logo-size-b
+    width: $logo-size-b

@@ -27,7 +27,7 @@
 $knight: #1f1f1f
 $space: #2F3738
 $moon: #999
-$gray: #ddd
+$mist: #FCFCFC
 $black: #000
 $white: #fff
 
@@ -37,13 +37,13 @@ $lightblue: #D5FBFF
 
 // ----- Base ----- //
 
-$c-background-invert: $moon
-$c-background: $space
-$c-border: lighten($space, 30%)
-$c-highlight: $moon
-$c-subdue: lighten($space, 40%)
-$c-text-invert: $white
-$c-text: $white
+$c-background-invert: $space
+$c-background: $mist
+$c-border: lighten($knight, 30%)
+$c-subdue: lighten($mist, 40%)
+$c-highlight: $frost
+$c-text-invert: $mist
+$c-text: $space
 
 // ----- Components ----- //
 
@@ -67,9 +67,11 @@ $b-boxShadow: 0 2px 0 rgba($c-text, 0.25)
 
 // ----- Typography ----- //
 
-$b-fontFamily-heading: sans-serif
-$b-fontFamily: sans-serif
-$b-fontSize: 16px
+$b-fontFamily: 'Droid Sans', 'Monaco', 'Andale Mono', 'Courier', 'Lucida Console', monospace
+$b-fontFamily-heading: $b-fontFamily
+$b-fontFamily-mono: 'Droid Sans Mono', 'Menlo', 'Monaco', 'Andale Mono', 'Courier', 'Lucida Console', monospace
+
+$b-fontSize: 18px
 $b-fontSize-xs: 75%
 $b-fontSize-s: 90%
 $b-fontSize-l: 115%
@@ -78,15 +80,24 @@ $b-fontSize-h1: 200%
 $b-fontSize-h2: 150%
 $b-fontSize-h3: 125%
 $b-fontSize-h4: 110%
+
 $b-lineHeight: 1.5
+
+$b-fontWeight-normal: 400
+$b-fontWeight-bold: 600
+
+// ----- Transitions ----- //
+
+$b-transition: all .2s ease-in
 
 // ----- Sizing ----- //
 
 $b-maxWidth: em(1024px)
 $b-maxWidth-s: em(700px)
-$b-space: em(20px)
+$b-space: em(30px)
 $b-space-xs: $b-space * 0.25
 $b-space-s: $b-space * 0.5
+$b-space-m: $b-space * 1
 $b-space-l: $b-space * 2
 $b-space-xl: $b-space * 4
 
@@ -96,8 +107,8 @@ $b-space-xl: $b-space * 4
 
 // Sector
 
-$sector-item--a-background: $moon
-$sector-item--b-background: $frost
+$sector-item--a-background: $space
+$sector-item--b-background: $knight
 
 // ----- Grid ----- //
 
@@ -105,26 +116,44 @@ $sector-item--b-background: $frost
 
 $g-s: em(480px)
 $g-m: em(800px)
-$g-l: em(1024px)
+$g-l: em(1200px)
 
 // Settings
 
-$g-columns: 12
-$g-defaults: 's' $g-s, 'm' $g-m, 'l' $g-l
-$g-gutter: $b-space
-$g-silent: false
+$g-columns: 4
+$g-breakpoints: (s: $g-s, m: $g-m, l: $g-l)
+$g-gutter: rem(20px)
 
-// Selector
+// ----- Row ----- //
 
-$g-selector: if($g-silent, unquote("%"), unquote("."))
+$row-gutter: rem(10px)
+$row-gutter-b: rem(20px)
 
 // -------------------------------------
 //   Structures
 // -------------------------------------
 
+// ----- Icon ----- //
+
+$icon-size: rem(30px)
+$icon-size-b: rem(40px)
+
 // ----- Logo ----- //
 
-$icon-size: rem(50px)
-$icon-size-b: rem(60px)
+$logo-size: rem(60px)
+$logo-size-b: rem(70px)
+
+// ----- Link ----- //
+
+$link-borderStyle: solid
+$link-borderWidth: 2px
+$link-color: $c-highlight
+$link--state-color: darken($link-color, 15%)
+$link--inverted-color: $c-text-invert
+$link--inverted--state-color: rgba($link--inverted-color, 0.5)
+
+// Label
+
+$label-color: $c-subdue
 
 // ...
