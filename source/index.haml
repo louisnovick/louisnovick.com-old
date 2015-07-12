@@ -12,7 +12,7 @@ description: Web Design and Development || Orlando, FL.
 					.tac.tct
 						%h1.mts
 							Louis Novick
-						.label.label--inverted 
+						.label.label--inverted
 							Web Developer, Designer, Student
 
 %section.row.has-sector.has-skew--m.bdrt
@@ -21,27 +21,33 @@ description: Web Design and Development || Orlando, FL.
 			.g-b.g-b--m--2of4.sector-item.sector-item--a
 				.well.well--l.well--m--xl
 					- post = get_posts().first
-					%h3.h1 Latest Post
-					= link_to post.data.title, post.url
+					%h2 Latest Post
+					%h1.label
+						= link_to post.data.title, post.url
 					%p= post.data.description
-					= link_to 'Read It', post.url
+					= link_to 'Read It', post.url, class: 'btn'
 			.g-b.g-b--m--2of4.sector-item.sector-item--b
-				.well.well--l.well--m--xl.pls--m
-					- get_posts().drop( 0 ).each do | post |
-						.posttitle
-							= link_to post.data.title, post.url
-						.datetime
-							%time= pretty_date( post.data.date )
+
+%section.row.bci.mbm--m
+	.cell.well.well--l.well--m--xl.pls--m
+		%h3.label.mbl Blog
+		%ul.list.list--divided
+			- get_posts().drop(0).each do | post |
+				%li.list-item.split.split--responsive
+					.split-cell.prs
+						= link_to post.data.title, post.url
+					.split-cell
+						%time.label= pretty_date( post.data.date )
 
 
 
 
-			
-				
-
-					
 
 
-						
+
+
+
+
+
 
 

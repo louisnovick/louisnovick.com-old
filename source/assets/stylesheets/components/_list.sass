@@ -1,0 +1,59 @@
+// *************************************
+//
+//   List
+//   -> Enumeration of items
+//      CodePen: http://codepen.io/drewbarontini/pen/ouqil
+//
+// -------------------------------------
+//   Template (Haml)
+// -------------------------------------
+//
+// %ul.list[divided object]
+//   %li.list-item List Item
+//   %li.list-item List Item
+//
+// *************************************
+
+.list
+  @extend .lr
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Divided ----- //
+
+.list--divided
+
+  > .list-item
+    border-bottom: $b-border
+    padding-bottom: $b-space
+
+    &:last-child
+      border-bottom: 0
+      padding-bottom: 0
+
+// ----- Object ----- //
+
+.list--object
+  display: inline-flex
+
+  > .list-item
+    margin-bottom: 0
+    margin-right: $b-space
+
+    &:last-child
+      margin-right: 0
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Item ----- //
+
+.list-item
+  display: block
+  margin-bottom: $b-space
+
+  &:last-child
+    margin-bottom: 0
