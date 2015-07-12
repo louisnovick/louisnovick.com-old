@@ -4,7 +4,7 @@
 
 	%body{:class => page_classes}
 		= partial 'shared/header'
-	
+
 		%main{ role: 'main' }
 
 			%section.row.polybg
@@ -13,7 +13,7 @@
 						.g-b.g-b--m--4of4
 							.well.well--l
 								%h1= current_page.data.title
-								%time= pretty_date( current_page.data.date )
+								%time.label.label--inverted= pretty_date( current_page.data.date )
 
 			%section.row.bcs
 				.cell
