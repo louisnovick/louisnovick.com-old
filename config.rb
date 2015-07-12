@@ -30,6 +30,14 @@ helpers do
   def pretty_date( date )
     date.strftime( '%B %d, %Y' )
   end
+
+  def page_title
+    if current_page.data.title
+      "#{ current_page.data.title } | #{ title }"
+    else
+      title
+    end
+  end
 end
 
 # ----- Paths ----- #
@@ -60,5 +68,5 @@ end
 activate :deploy do |deploy|
   deploy.method = :git
   #deploy.remote   = 'git@github.com:louisnovick/louisnovick.github.io.git' # remote name or git url, default: origin
-  deploy.branch   = 'master' 
+  deploy.branch   = 'master'
 end
