@@ -15,13 +15,13 @@ description: Web Design and Development || Orlando, FL.
 						.label.label--inverted
 							Web Developer, Designer, Student
 
-%section.row.has-sector.bdrt
+%section.row.has-sector
 	.cell
 		.g.sector.tci
 			.g-b.g-b--m--2of4.sector-item.sector-item--a
 				.well.well--l.well--m--xl
 					- post = get_posts().first
-					%h2 Latest Post
+					%h3 Latest Post
 					%h1.label
 						= link_to post.data.title, post.url
 					%p= post.data.description
