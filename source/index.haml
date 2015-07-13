@@ -21,7 +21,7 @@ description: Web Design and Development || Orlando, FL.
 			.g-b.g-b--m--3of4.sector-item.sector-item--a
 				.well.well--l.well--m--xl
 					- post = get_posts().first
-					%h3 Latest Post
+					%h3.label Latest Post
 					%h1
 						= link_to post.data.title, post.url
 					%p= post.data.description
