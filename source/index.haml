@@ -5,20 +5,18 @@ description: Web Design and Development || Orlando, FL.
 
 %section.row.polybg
 	.cell
-		.g
-			.g-b.g-b--m--4of4
-				.well.well--l
-					= image_tag 'louis.jpg', class: 'thumb mhc', alt: "Louis Novick Web Development", width: 140, height: 140
-					.tac.tct
-						%h1.mts
-							Louis Novick
-						.label.label--inverted.h4
-							Web Developer, Designer, Student
+		.well.well--l
+			= image_tag 'louis.jpg', class: 'thumb mhc', alt: "Louis Novick Web Development", width: 140, height: 140
+			.tac.tct
+				%h1.mts
+					Louis Novick
+				.label.label--inverted.h4
+					Web Developer, Designer, Student
 
 %section.row.has-sector
 	.cell
 		.g.sector.tci
-			.g-b.g-b--m--3of4.sector-item.sector-item--a
+			.g-b.g-b--m--3of5.sector-item.sector-item--a
 				.well.well--l.well--m--xl
 					- post = get_posts().first
 					%h3.label Latest Post
@@ -26,11 +24,11 @@ description: Web Design and Development || Orlando, FL.
 						= link_to post.data.title, post.url
 					%p= post.data.description
 					= link_to 'Read It', post.url, class: 'btn'
-			.g-b.g-b--m--1of4.sector-item.sector-item--b.tac
+			.g-b.g-b--m--2of5.sector-item.sector-item--b.tac
 				.well.well--l.well--m--xl
-					.g-b.g-b--m--4of4.mbm
+					.g-b.mbm
 						#{link_to 'Recent Work', '#', class: 'link link--bordered link--inverted'}
-					.g-b.g-b--m--4of4
+					.g-b
 						#{link_to 'Talk To Me', '#', class: 'link link--bordered link--inverted'}
 
 %section.row.bcs.mbm--m

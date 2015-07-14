@@ -9,18 +9,14 @@
 
 			%section.row.polybg
 				.cell
-					.g
-						.g-b.g-b--m--4of4
-							.well.well--l
-								%h1= current_page.data.title
-								%time.label.label--inverted= pretty_date( current_page.data.date )
+					.well.well--l
+						%h1= current_page.data.title
+						%time.label.label--inverted= pretty_date( current_page.data.date )
 
 			%section.row.bcs
 				.cell
-					.g
-						.g-b.g-b--m--4of4
-							.well.well--l
-								= yield
+					.well.well--l
+						= yield
 
 		= partial 'shared/footer'
 
