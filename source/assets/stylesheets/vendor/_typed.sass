@@ -1,8 +1,15 @@
-.b-cursor
+.typed-cursor
+  color: $c-highlight
   opacity: 1
   -webkit-animation: blink 0.7s infinite
   -moz-animation: blink 0.7s infinite
   animation: blink 0.7s infinite
+  // --- Make larger --- //
+  border-right: 10px solid
+  // --- Fix for postion --- //
+  position: relative
+  padding-right: 5px
+  bottom: 1px
 
 @keyframes blink
   0%
