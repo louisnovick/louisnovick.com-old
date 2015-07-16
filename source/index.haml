@@ -4,45 +4,50 @@ description: Web Design and Development || Orlando, FL.
 ---
 
 %section.row.bc-knight
-	.cell
-		.well.well--l
-			= image_tag 'louis.jpg', class: 'thumb mhc', alt: "Louis Novick Web Development", width: 140, height: 140
-			.tac
-				%h1.mts.tch
-					Louis Novick
-				%span.label.label--inline.tci.h4.typed
+  .cell
+    .well.well--l
+      = image_tag 'louis.jpg', class: 'thumb mhc', alt: "Louis Novick Web Development", width: 140, height: 140
+      .tac
+        %h1.mts.tch
+          Louis Novick
+        %span.label.label--inline.tci.h4.typed
 
 
 %section.row.has-sector
-	.cell
-		.g.sector.tci
-			.g-b.g-b--m--3of5.sector-item.sector-item--a
-				.well.well--l.well--m--xl
-					- post = get_posts().first
-					%h3.label Latest Post
-					%h1
-						= link_to post.data.title, post.url
-					%p= post.data.description
-					= link_to 'Read It', post.url, class: 'btn'
-			.g-b.g-b--m--2of5.sector-item.sector-item--b.tac
-				.well.well--l.well--m--xl
-					.g-b.mbm.plf.pls--m
-						#{link_to 'Recent Work', '#', class: 'link link--bordered link--inverted'}
-					.g-b.plf.pls--m
-						#{link_to 'Talk To Me', '#', class: 'link link--bordered link--inverted'}
+  .cell
+    .g.sector.tci
+      .g-b.g-b--m--3of5.sector-item.sector-item--a
+        .well.well--l.well--m--xl
+          - post = get_posts().first
+          %h3.label Latest Post
+          %h1
+            = link_to post.data.title, post.url
+          %p= post.data.description
+          = link_to 'Read It', post.url, class: 'btn'
+      .g-b.g-b--m--2of5.sector-item.sector-item--b.tac
+        .well.well--l.well--m--xl
+          .g-b.mbm.plf.pls--m
+            = link_to '#', class: 'db' do
+              = image_tag 'work.svg', alt: "Work section", class: "icon"
+            = link_to 'Recent Work', '#', class: 'link link--bordered link--inverted'
+          .g-b.plf.pls--m
+            = link_to '#', class: 'db' do
+              = image_tag 'contact.svg', alt: "Contact me", class: "icon"
+            = link_to 'Reach Me', '#', class: 'link link--bordered link--inverted'
+
 
 %section.row.bcs.mbm--m
-	.cell.well.well--l
-		%h3.label.mbm Blog
-		%ul.list.list--divided
-			- get_posts().take(5).each do | post |
-				%li.list-item.split.split--responsive
-					.split-cell.prs.twb
-						= link_to post.data.title, post.url
-					.split-cell
-						%time.label= pretty_date( post.data.date )
-		-#.mtl.mbl.tac
-		-#	= link_to 'See All Posts', '#', class: 'btn btn--light'
+  .cell.well.well--l
+    %h3.label.mbm Blog
+    %ul.list.list--divided
+      - get_posts().take(5).each do | post |
+        %li.list-item.split.split--responsive
+          .split-cell.prs.twb
+            = link_to post.data.title, post.url
+          .split-cell
+            %time.label= pretty_date( post.data.date )
+    -#.mtl.mbl.tac
+    -#  = link_to 'See All Posts', '#', class: 'btn btn--light'
 
 
 
