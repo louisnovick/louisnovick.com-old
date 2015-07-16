@@ -48,14 +48,16 @@ $(function() {
         dataType: "json",
         success: function(data){
           // Success message
-          $('#contactForm').html("<strong>Message sent.  I will get back to you soon, thank you!</strong>");
+          $('#contactForm').html("<p class='tci tac'>Message sent.  I will get back to you soon, thank you!</p>");
+          $( ".row--slide" ).css("height", "150px");
+          $( ".row--close" ).css("display", "none");
           //clear all fields
           $('#contactForm').trigger("reset");
-          $('.formcontain p').addClass("hidden");
+          $('.form input').addClass("hidden");
         },
         error: function(){
           // Fail message
-          $('#contactForm').append("<strong>Sorry there seems to have been an issue.  Please try again.</strong>");
+          $('#contactForm').append("<p class='tci tac'>Sorry there seems to have been an issue.  Please try again.</p>");
           //clear all fields
           $('#contactForm').trigger("reset");
         }
@@ -71,6 +73,12 @@ $(function(){
         cursorChar: ""
     });
 });
+
+$( ".active--slide" ).click(function() {
+  event.preventDefault();
+  $( ".row--slide" ).slideToggle("slow");
+});
+
 
 
 

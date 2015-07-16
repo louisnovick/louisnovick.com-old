@@ -13,7 +13,7 @@ description: Web Design and Development || Orlando, FL.
         %span.label.label--inline.tci.h4.typed
 
 
-%section.row.has-sector
+%section#recent.row.has-sector
   .cell
     .g.sector.tci
       .g-b.g-b--m--3of5.sector-item.sector-item--a.pts--m
@@ -29,16 +29,18 @@ description: Web Design and Development || Orlando, FL.
           .plf.pls--m.mbl
             = link_to '#', class: 'db' do
               = image_tag 'work.svg', alt: "Work section", class: "icon"
-            = link_to 'Recent Work', '#', class: 'link link--bordered link--inverted tsl--m'
+            = link_to 'Recent Work', '#', class: 'link link--bordered link--inverted tsl--m '
           .plf.pls--m
-            = link_to '#', class: 'db' do
+            = link_to '#contact', class: 'db active--slide' do
               = image_tag 'contact.svg', alt: "Contact me", class: "icon"
-            = link_to 'Reach Me', '#', class: 'link link--bordered link--inverted tsl--m'
+            = link_to 'Reach Me', '#contact', class: 'link link--bordered link--inverted tsl--m active--slide'
 
-%section.row.bc-knight
+%section#contact.row.row--slide.bc-knight
+  = link_to 'X', '#recent', class: 'h1 db mtxs active--slide row--close'
   .cell
-    .well.well--l
-      %form{:action => "//formspree.io/louis@louisnovick.com", :method => "POST", :class => "form"}
+    .well.well--m.well--m--l
+      %form{:action => "//formspree.io/louis@louisnovick.com", :method => "POST", :class => "form", :id => "contactForm"}
+        %p.label.tac Shoot me a message and I will get back to you as soon as I can.
         %fieldset.form-field
           %label.form-label(for="name") Name
           %input.form-input(type="text" id="name" required="true")
