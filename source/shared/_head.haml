@@ -1,13 +1,14 @@
 %head
-	%meta{:charset => "utf-8"}/
-	%meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
-	%meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+  %meta{:charset => "utf-8"}/
+  %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+  %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+  %title= "#{ current_page.data.title }"
+  %meta{ name: 'description', content: escape_html( current_page.data.description ) }
+  = stylesheet_link_tag "application"
+  %link{:href => "favicon.ico", :rel => "icon", :type => "image/x-icon"}
+  :javascript
+    document.documentElement.className += ' wf-loading';
 
-	%title= "#{ current_page.data.title } | Louis Novick"
-	%meta{ name: 'description', content: escape_html( current_page.data.description ) }
-	= stylesheet_link_tag "application"
-	%link{:href => "favicon.ico", :rel => "icon", :type => "image/x-icon"}/
-	%meta{:content => "0NQQvJVlQjZ3fTLlLakXg2XDePK1537pvgptd7RJo48", :name => "google-site-verification"}/
 
 
-  
+
