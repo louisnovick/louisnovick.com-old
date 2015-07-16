@@ -16,8 +16,8 @@ description: Web Design and Development || Orlando, FL.
 %section#recent.row.has-sector
   .cell
     .g.sector.tci
-      .g-b.g-b--m--3of5.sector-item.sector-item--a.ptm--l
-        .well.well--l
+      .g-b.g-b--m--3of5.sector-item.sector-item--a
+        .well.well--xl
           - post = get_posts().first
           %h3.label Latest Post
           %h1
@@ -26,7 +26,7 @@ description: Web Design and Development || Orlando, FL.
           = link_to 'Read It', post.url, class: 'btn'
       .g-b.g-b--m--2of5.sector-item.sector-item--b.tac
         .well.well--l
-          .plf.pls--m.mbl
+          .plf.pls--m.pbl
             = link_to '#', class: 'db' do
               = image_tag 'work.svg', alt: "Work section", class: "icon"
             = link_to 'Recent Work', '#', class: 'link link--bordered link--inverted tsl--m '
