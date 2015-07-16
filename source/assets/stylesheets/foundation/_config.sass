@@ -129,14 +129,17 @@ $btn-fontSize: 15px
 $btn-height: rem(40px)
 $btn-space: rem(30px)
 $btn-space-s: $btn-space * 0.5
-$btn-borderRadius: 20px
+$btn-border: 2px solid $c-highlight
+$btn-border-light: 0
+$btn-borderRadius: 2px
 
-$btn-background: $c-background
-$btn-color: $c-text
-$btn--state-background: darken($btn-background, 10%)
-$btn-background-light: $c-background-invert
+$btn-background: linear-gradient($space 50%, $lab 50%)
+$btn-color: $c-highlight
+$btn--state-background: $c-highlight
+$btn--state-color: $c-text-invert
+$btn-background-light: $space
 $btn-color-light: $c-text-invert
-$btn--state-background-light: darken($btn-background-light, 10%)
+$btn--state-background-light: darken($space, 10%)
 
 // Psuedo Element
 $btn-pseudo-width: rem(0)

@@ -16,6 +16,9 @@
   +action
   +font-size(( b: $btn-fontSize ))
   background: $btn-background
+  background-repeat: repeat
+  background-size: 100% 200%
+  border: $btn-border
   border-radius: $btn-borderRadius
   color: $btn-color
   font-family: $b-fontFamily-mono
@@ -30,15 +33,20 @@
   word-spacing: 0
 
   +state
-    background: $btn--state-background
-    color: $btn-color
+    background-color: $btn--state-background
+    background-position: 200% 100%
+    border: $btn-border
+    color: $btn--state-color
 
 // Modifiers
 
 .btn--light
   background: $btn-background-light
+  border: $btn-border-light
   color: $btn-color-light
 
   +state
     background: $btn--state-background-light
+    border: $btn-border-light
     color: $btn-color-light
+

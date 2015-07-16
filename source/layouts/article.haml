@@ -10,7 +10,7 @@
       %section.row.bch
         .cell
           .well.well--l
-            = link_to "Back", '#', class: "btn mbm", :onclick => 'history.back(); return false;'
+            = link_to "Back", '#', class: "btn btn--light mbm", :onclick => 'history.back(); return false;'
             %h1= current_page.data.title
             %time.label.label--inverted= pretty_date( current_page.data.date )
 
