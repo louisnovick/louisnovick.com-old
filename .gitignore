@@ -1,6 +1,8 @@
-/bin
+.cache
+.DS_Store
 /.bundle
 /.sass-cache
-.DS_Store
-.cache
 /Rakefile
+/build/
+/bower_components/
+/node_modules/
