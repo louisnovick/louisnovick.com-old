@@ -2,7 +2,7 @@
 .DS_Store
 /.bundle
 /.sass-cache
-/Rakefile
+Rakefile
 /build/
 /bower_components/
 node_modules

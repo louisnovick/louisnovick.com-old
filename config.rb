@@ -66,6 +66,7 @@ end
 # ----- Deploy ----- #
 
 activate :deploy do |deploy|
+  deploy.build_before = false
   deploy.method = :git
   #deploy.remote   = 'git@github.com:louisnovick/louisnovick.github.io.git' # remote name or git url, default: origin
   deploy.branch   = 'master'
