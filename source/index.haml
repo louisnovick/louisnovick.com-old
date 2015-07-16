@@ -43,15 +43,15 @@ description: Web Design and Development || Orlando, FL.
         %p.label.tac Shoot me a message and I will get back to you as soon as I can.
         %fieldset.form-field
           %label.form-label(for="name") Name
-          %input.form-input(type="text" id="name" required="true")
+          %input.form-input(type="text" name="name" id="name" required="true")
 
         %fieldset.form-field
           %label.form-label(for="email") Email
-          %input.form-input(type="email" id="email" required="true")
+          %input.form-input(type="email" name="email" id="email" required="true")
 
         %fieldset.form-field
           %label.form-label(for="message") Transmission
-          %textarea.form-input(id="message" rows="5" required="true")
+          %textarea.form-input(id="message" name="message" rows="5" required="true")
         %input{:name => "_subject", :type => "hidden", :value => "New contact form submission!"}
         %input{:name => "_gotcha", :style => "display:none", :type => "text"}
         %input{:type => "submit", :value => "Send", :class => "btn"}
