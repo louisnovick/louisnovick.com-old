@@ -1,0 +1,24 @@
+{
+  "name": "louisnovick.github.io",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louisnovick/louisnovick.com"
+  },
+  "author": "Louis Novick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/louisnovick/louisnovick.com/issues"
+  },
+  "homepage": "https://github.com/louisnovick/louisnovick.com",
+  "devDependencies": {
+    "gulp": "",
+    "gulp-uncss": "",
+    "gulp-csso": ""
+  }
+}
