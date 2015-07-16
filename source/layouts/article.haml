@@ -1,24 +1,25 @@
 !!! 5
 %html{ lang: 'en' }
-	= partial 'shared/head'
+  = partial 'shared/head'
 
-	%body{:class => page_classes}
-		= partial 'shared/header'
+  %body{:class => page_classes}
+    = partial 'shared/header'
 
-		%main{ role: 'main' }
+    %main{ role: 'main' }
 
-			%section.row.bch
-				.cell
-					.well.well--l
-						%h1= current_page.data.title
-						%time.label.label--inverted= pretty_date( current_page.data.date )
+      %section.row.bch
+        .cell
+          .well.well--l
+            = link_to "Back", '#', class: "btn mbm", :onclick => 'history.back(); return false;'
+            %h1= current_page.data.title
+            %time.label.label--inverted= pretty_date( current_page.data.date )
 
-			%section.row.bcs
-				.cell
-					.well.well--l
-						= yield
+      %section.row.bcs
+        .cell
+          .well.well--l
+            = yield
 
-		= partial 'shared/footer'
+    = partial 'shared/footer'
 
-		= partial 'shared/footer-scripts'
+    = partial 'shared/footer-scripts'
 

@@ -55,7 +55,6 @@ $b-borderStyle: dotted
 $b-borderWidth: 3px
 $b-border: $b-borderWidth $b-borderStyle $c-border
 $b-boxShadow: 0 2px 0 rgba($c-text, 0.25)
-$btn-borderRadius: 3px
 
 // ----- Typography ----- //
 
@@ -72,8 +71,6 @@ $b-fontSize-h1: 200%
 $b-fontSize-h2: 150%
 $b-fontSize-h3: 125%
 $b-fontSize-h4: 110%
-
-$btn-fontSize: $b-fontSize
 
 $b-lineHeight: 1.5
 
@@ -95,21 +92,23 @@ $b-space-m: $b-space * 1
 $b-space-l: $b-space * 2
 $b-space-xl: $b-space * 4
 
-$btn-height: rem(50px)
-$btn-space: rem(20px)
-$btn-space-s: $btn-space * 0.5
-
 // -------------------------------------
 //   Components
 // -------------------------------------
 
 // Button
 
-$btn-background: $knight
-$btn-color: $c-subdue
+$btn-fontSize: 15px
+$btn-height: rem(40px)
+$btn-space: rem(30px)
+$btn-space-s: $btn-space * 0.5
+$btn-borderRadius: 20px
+
+$btn-background: $c-background
+$btn-color: $c-text
 $btn--state-background: darken($btn-background, 10%)
-$btn-background-light: $lab
-$btn-color-light: $knight
+$btn-background-light: $c-background-invert
+$btn-color-light: $c-text-invert
 $btn--state-background-light: darken($btn-background-light, 10%)
 
 // Psuedo Element
