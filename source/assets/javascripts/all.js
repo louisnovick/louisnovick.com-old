@@ -48,8 +48,8 @@ $(function() {
         dataType: "json",
         success: function(data){
           // Success message
-          $('#contactForm').html("<p class='tci tac'>Message sent.  I will get back to you soon, thank you!</p>");
-          $( ".row--slide" ).css("height", "150px");
+          $('#contactForm').html("<p class='tci tac'>Transmission sent.  I will get back to you soon, thank you!</p>");
+          $( ".row--slide" ).css("height", "90px");
           $( ".row--close" ).css("display", "none");
           //clear all fields
           $('#contactForm').trigger("reset");
