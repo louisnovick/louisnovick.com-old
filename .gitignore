@@ -5,4 +5,4 @@
 /Rakefile
 /build/
 /bower_components/
-/node_modules/
+node_modules
