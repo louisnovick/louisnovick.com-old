@@ -69,8 +69,7 @@ $(function(){
     $(".typed").typed({
         strings: ['Web Developer, Designer, Student'],
         typeSpeed: 30,
-        showCursor: true,
-        cursorChar: ""
+        showCursor: false
     });
 });
 
