@@ -8,17 +8,17 @@ description: "My goal for this blog is to reflect on what I learn and to impart 
 
 ##Launch
 
-My goal for this blog is to reflect on what I learn and to impart knowledge on anybody who will listen.  While I am not an expert in my field now I am 100% certain that I have the potential to be one someday.  
+My goal for this blog is to reflect on what I learn and to impart knowledge on anybody who will listen.  While I am not an expert in my field now I am 100% certain that I have the potential to be one someday.
 
 I am always eager to learn new things and find more efficient ways of accomplishing my goals.  By sharing what I learn while growing as a developer I hope to become a bigger part of the amazing community of developers that already exists and continues to inspire my work each and every day.
 
 ###The Process
 
-To build my website I utilized [Middleman](https://middlemanapp.com/) and [Bourbon](http://bourbon.io/) in conjunction with other modern web technologies.  It's 100% okay if you don't know what these are right now, neither did I a month ago.  [Bourbon](http://bourbon.io/) is a sass framework and [Middleman](https://middlemanapp.com/) is a static site generator that leverages the Ruby language. Prior to developing this site I had never really worked with a Static Site Generator such as the well known 'Jekyll'.  It's difficult to really define what a static site generator is but if I had to sum it up in one sentence, "A Template directory containing various file formats that once compiled form a functional website".  It goes without saying that developing this site really exposed me to some tools and elements I feel I have really been missing out on.  Some of these include:
+To build my website I utilized [Middleman](https://middlemanapp.com/) and [Bourbon](http://bourbon.io/) in conjunction with other modern web technologies.  [Bourbon](http://bourbon.io/) is a sass framework and [Middleman](https://middlemanapp.com/) is a static site generator that leverages the Ruby language. Prior to developing this site I had never really worked with a Static Site Generator such as the well known 'Jekyll'.  It's difficult to really define what a static site generator is but if I had to sum it up in one sentence, "A Template directory containing various file formats that once compiled form a functional website".  It goes without saying that developing this site really exposed me to some tools and elements I feel I have really been missing out on.  Some of these include:
 
 * [Haml](http://http://haml.info/)
 * SCSS Partials and inline Media Queries
-* SVG 
+* SVG
 
 
 ###[Haml](http://http://haml.info/) and Static Site Templating
@@ -35,7 +35,7 @@ SVG is an interesting facet of the modern web that I found myself eager to explo
 
 ###Final Remarks
 
-If you havn't investigated [Middleman](https://middlemanapp.com/) yet you should.  Similar to Jekyll, [Middleman](https://middlemanapp.com/) is a static site generator that leverages Ruby to create an excellent development environment for you to work in.  It also makes it really easy to deploy/manage the site later down the road.  I currently work on this site locally, as you should, and when I am ready to push it out to github pages I simply type in `Middleman deploy` in my terminal and off it goes.  It truly is a great way to develop websites of this nature that feels fresh and really gives you wings throughout the entire process.  As designers and developers we must strive to always find faster and more efficient ways of doing things.  [Middleman](https://middlemanapp.com/) really improved my process and I know this wont be the last time I use it.  
+If you havn't investigated [Middleman](https://middlemanapp.com/) yet you should.  Similar to Jekyll, [Middleman](https://middlemanapp.com/) is a static site generator that leverages Ruby to create an excellent development environment for you to work in.  It also makes it really easy to deploy/manage the site later down the road.  I currently work on this site locally, as you should, and when I am ready to push it out to github pages I simply type in `Middleman deploy` in my terminal and off it goes.  It truly is a great way to develop websites of this nature that feels fresh and really gives you wings throughout the entire process.  As designers and developers we must strive to always find faster and more efficient ways of doing things.  [Middleman](https://middlemanapp.com/) really improved my process and I know this wont be the last time I use it.
 
 
 ------------------
