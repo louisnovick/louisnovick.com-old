@@ -49,7 +49,7 @@ $(function() {
         success: function(data){
           // Success message
           $('#contactForm').html("<p class='tci tac'>Transmission sent.  I will get back to you soon, thank you!</p>");
-          $( ".row--slide" ).css("height", "90px");
+          $( ".row--slide" ).css("height", "150px");
           $( ".row--close" ).css("display", "none");
           //clear all fields
           $('#contactForm').trigger("reset");
