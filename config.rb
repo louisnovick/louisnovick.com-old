@@ -7,7 +7,7 @@ activate :syntax
 activate :directory_indexes
 
 activate :autoprefixer do |config|
-  config.browsers = ['last 2 versions', 'Explorer >= 10']
+  config.browsers = ['last 3 versions', 'Explorer >= 10']
   config.cascade = false
 end
 
