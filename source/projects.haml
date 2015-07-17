@@ -1,5 +1,5 @@
 ---
-title: Projects and other recent work
+title: Projects and other past work
 description: Web Design and Development || Orlando, FL.
 ---
 
@@ -14,20 +14,38 @@ description: Web Design and Development || Orlando, FL.
 %section.row
   .cell
     .well.well--m.well--m--l.tac
-      .g
-        .g-b.g-b--l--1of3
-          .card
-            = link_to 'Work Title', '#', class: 'label link link--bordered'
-        .g-b.g-b--l--1of3
-          .card
-            = link_to 'Work Title', '#', class: 'label link link--bordered'
-        .g-b.g-b--l--1of3
-          .card
-            = link_to 'Work Title', '#', class: 'label link link--bordered'
-        .g-b.g-b--l--1of3
-          .card
-            = link_to 'Work Title', '#', class: 'label link link--bordered'
-        .g-b.g-b--l--1of3
-          .card
-            = link_to 'Work Title', '#', class: 'label link link--bordered'
+      .card
+        = link_to 'Captiol Watch', 'https://github.com/mishingo/capitol-watch', class: 'label link', :target => '_blank'
+      .card
+        = link_to 'Stuhl Engineering Consultants Inc.', 'http://stuhlengineering.com/', class: 'label link', :target => '_blank'
+      .card
+        = link_to 'Orlando Pub Crawl', 'http://orlandopubcrawl.com/', class: 'label link', :target => '_blank'
+      .card
+        = link_to 'Cullen & Hemphill PLC', 'http://cullen-hemphill.com/', class: 'label link', :target => '_blank'
+      .card
+        = link_to 'Price Law Firm', 'http://cpricelawfirm.com/', class: 'label link', :target => '_blank'
 
+      = link_to 'Check out my Github', 'http://github.com/louisnovick', class: 'mtm--m btn btn--light', :target => '_blank'
+
+%section.row.bci.tci
+  .cell
+    .well.well--m.well--m--l
+      - post = get_posts().first
+      %h3.label Latest Post
+      %h1
+        = link_to post.data.title, post.url
+      %p= post.data.description
+      = link_to 'Read It', post.url, class: 'btn'
+
+%section.row.bcs.mbm--m
+  .cell.well.well--l
+    %h3.label.mbm Blog
+    %ul.list.list--divided
+      - get_posts().take(5).each do | post |
+        %li.list-item.split.split--responsive
+          .split-cell.prs.twb
+            = link_to post.data.title, post.url
+          .split-cell
+            %time.label= pretty_date( post.data.date )
+    -#.mtl.mbl.tac
+    -#  = link_to 'See All Posts', '#', class: 'btn btn--light'
