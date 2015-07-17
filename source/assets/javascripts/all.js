@@ -1,26 +1,5 @@
 //= require_tree .
 
-
-//SVG injection
-var injectSVG = document.querySelectorAll('img.svg-inject');
-
-// Options
-var injectorOptions = {
-  evalScripts: 'once',
-  pngFallback: '../images/png/png',
-  each: function (svg) {
-    //Callback after each SVG is injected
-    //console.log('SVG injected: ' + svg.getAttribute('id'));
-  }
-};
-
-// Trigger the injection
-SVGInjector(injectSVG, injectorOptions, function (totalSVGsInjected) {
-  //Callback after all SVGs are injected
-  //console.log('We injected ' + totalSVGsInjected + ' SVG(s)!');
-  $('img.svg-inject').css('display', 'block');
-});
-
 //smooth scroll
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
