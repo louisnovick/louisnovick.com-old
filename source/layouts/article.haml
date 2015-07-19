@@ -12,13 +12,13 @@
           .well.well--l
             %h1= current_page.data.title
             %time.label.label--inverted= pretty_date( current_page.data.date )
-            = link_to "Back", '#', class: "btn btn--light mtm", :onclick => 'history.back(); return false;'
 
       %section.row
         .cell
           .well.well--l
-            = yield
-
+            = preserve do
+              = yield
+            = link_to "Back", '#', class: "btn btn--light mts", :onclick => 'history.back(); return false;'
 
     = partial 'shared/footer'
 

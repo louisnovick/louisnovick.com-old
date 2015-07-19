@@ -3,7 +3,7 @@
 # ====================================
 
 activate :livereload
-activate :syntax
+activate :syntax, css_class: 'syntax'
 activate :directory_indexes
 
 activate :autoprefixer do |config|
