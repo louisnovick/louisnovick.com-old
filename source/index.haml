@@ -6,7 +6,7 @@ description: Web Design and Development || Orlando, FL.
 %section.row.bc-knight
   .cell
     .well.well--l
-      = image_tag 'louis.jpg', class: 'thumb mhc', alt: "Louis Novick Web Development", width: 120, height: 120
+      = image_tag 'louis.jpg', class: 'thumb mhc', alt: "Louis Novick Web Development", width: 130, height: 130
       .tac
         %h1.mts.tch
           Louis Novick
@@ -21,7 +21,7 @@ description: Web Design and Development || Orlando, FL.
         .well.well--l.well--m--xl
           - post = get_posts().first
           %h3.label Latest Post
-          %h1
+          %h1.h2
             = link_to post.data.title, post.url
           %p= post.data.description
           = link_to 'Read It', post.url, class: 'btn'

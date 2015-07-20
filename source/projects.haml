@@ -32,7 +32,7 @@ description: Web Design and Development || Orlando, FL.
     .well.well--m.well--m--l
       - post = get_posts().first
       %h3.label Latest Post
-      %h1
+      %h1.h2
         = link_to post.data.title, post.url
       %p= post.data.description
       = link_to 'Read It', post.url, class: 'btn'
