@@ -1,12 +1,12 @@
 ---
-title: Static Site Templating with Haml
+title: A short introduction to Haml
 type: post
 layout: article
 date: 2015-07-19
-description: "I talk about writing clear, maintainable HTML using Haml.  I also go over how I keep my static site templates organized with Haml partials."
+description: "I talk about how to get started writing clear, maintainable HTML using Haml."
 ---
 
-##[Haml](http://haml.info/) and Static Site Templating
+##What is [Haml](http://haml.info/)?
 
 Simply defined, Haml is an abstract HTML preprocessor that allows you to write beautiful, DRY, well-indented and clear markup.  It provides you with an easily understood syntax that's easy to adjust to even if you have little to no prior experience with other HTML preprocessors.  Depending on what you're using it for I think it's very possible to have a working knowledge of it within an hour of time.
 
@@ -69,41 +69,5 @@ Here's an example of Haml that would throw back an error...
 
 This isn't a problem though! I believe it's actually a feature in its own way.  By enforcing correct indentation Haml helps preserve a certain degree of predictability and consistency throughout your HTML allowing for quickly scanning pages with little confusion as to what div is nested in what.  This is worth the occasional error in my book.
 
-###Using partials
 
-Haml also allows you to split your files into partials to be organized and reused in other HTML templates. To illustrate this, take a look at the Haml for the page you're looking at right now.  See below...
-
-```haml
-!!! 5
-%html{ lang: 'en' }
-  = partial 'shared/head'
-
-  %body{:class => page_classes}
-    = partial 'shared/header'
-
-    %main{ role: 'main' }
-
-      %section.row.bch
-        .cell
-          .well.well--l
-            %h1= current_page.data.title
-            %time.label.label--inverted= pretty_date( current_page.data.date )
-
-      %section.row
-        .cell
-          .well.well--l
-            = preserve do
-
-              = yield
-
-            = link_to "Back", '#', class: "btn btn--light mts", :onclick => 'history.back(); return false;'
-
-    = partial 'shared/footer'
-
-    = partial 'shared/footer-scripts'
-```
-
-Notice `= partial 'shared/header'`, `= partial 'shared/footer'`.  Each call is to a separate Haml file containing the code for my navigation and footer respectively.  Partialing in Haml makes managing your site templates a piece of cake.  For example, my scripts are neatly tucked away in a partial called `footer-scripts.haml` located in my shared folder.  So to call my javascript files I would simply add `= partial 'shared/footer-scripts'` to any templates I create for my site.  The meat and potatoes of the post you are reading is added to the template by `= yield`.  Easy, maintainable, fun.
-
-Give it a try!
 
