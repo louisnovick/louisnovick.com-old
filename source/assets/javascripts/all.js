@@ -53,7 +53,7 @@ $(function(){
 });
 
 $( ".active--slide" ).click(function() {
-  event.preventDefault();
+  event.preventDefault ? event.preventDefault() : event.returnValue = false;
   $( ".row--slide" ).slideToggle("slow");
 });
 
