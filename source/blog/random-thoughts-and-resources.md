@@ -3,17 +3,14 @@ title: Random Thoughts and Resources
 type: post
 layout: article
 date: 2015-05-12
-description: "First you choose something you love to do.  For me this is web development.  Then you make the conscious decision to keep getting better at it until you feel you've mastered it, which is probably never.  Practice, practice, practice and relish in the Journey."
+description: "First you choose something you love to do.  Then you make the conscious decision to keep getting better at it until you feel you've mastered it.  Practice, practice, practice and relish in the Journey."
 ---
 
 ##Practice makes the Master
 
 First you choose something you love to do.  For me this is web development.  Then you make the conscious decision to keep getting better at it until you feel you've mastered it, which is probably never.  Practice, practice, practice and relish in the Journey.  For many of us, the most practice we get is on the job.  Some may not be fortunate enough to work in a job where they get to do this.  If you are one of these people.  1.  Get a new Job.  2.  Practice at home, whenever you can.
 
-I make it a point to try and practice every day.  I'll usually work on my website, analyze how something else is built, try out a new tool/method or just throw some code on the canvas.  If your ability to perform a particular skill increases by 1% everyday than by the end of the year you will have become 365% better at it I tell myself.  I try to look at this daily experience as a sort of compounding investment that continues to grow with each passing year.  One day I'm going to look back and smile.
-
-##Love what you do
-Please love what you do.  Life is too short!  Sometimes I worry about waking up one day and wondering where all my time went.  Oh wait, that already happened! (Am I too young to talk like this?)  If you don’t love what you do motivating yourself becomes difficult and a chore.  When things are chores but don't have to be you are wasting valuable time you can't get back.  I don’t think its ever too late to change course so go do what you love!
+I make it a point to try and practice every day.  I'll usually work on my website, analyze how something else is built, try out a new tool/method or just throw some code on the canvas.  If your ability to perform a particular skill increases by 1% everyday than by the end of the year you will have become 365% better at.  I try to look at this daily experience as a sort of compounding investment that continues to grow with each passing year.  One day I'm going to look back and smile.
 
 ##Resources I use (Last Updated July 20th, 2015)
 I have compiled a list of resources I use to keep up with my learning and to practice/level up my skills.  While varying in medium, they all fulfill their purpose in my professional life and help me get better at what I love.  Here they are:
@@ -25,6 +22,5 @@ I have compiled a list of resources I use to keep up with my learning and to pra
 ####[Scotch.io](https://scotch.io/)
 ####[CSS-Tricks](https://css-tricks.com/)
 ####[CSS Wizardry](http://csswizardry.com/)
-####[Github](http://github.com/)
 
 
