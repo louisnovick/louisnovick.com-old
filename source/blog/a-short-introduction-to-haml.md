@@ -3,7 +3,7 @@ title: A short introduction to Haml
 type: post
 layout: article
 date: 2015-07-19
-description: "I talk about how to get started writing clear, maintainable HTML using Haml."
+description: "I talk about how to get started writing clear and maintainable HTML using Haml."
 ---
 
 ##What is [Haml](http://haml.info/)?
