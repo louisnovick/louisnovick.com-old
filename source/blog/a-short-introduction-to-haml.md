@@ -8,7 +8,7 @@ description: "I talk about how to get started writing clear and maintainable HTM
 
 ##What is [Haml](http://haml.info/)?
 
-Simply defined, Haml is an abstract HTML preprocessor that allows you to write beautiful, DRY, well-indented and clear markup.  It provides you with an easily understood syntax that's easy to adjust to even if you have little to no prior experience with HTML preprocessors.  I think it's very possible to have a working knowledge of Haml within a relatively short amount of time.  It took about an hour for me to get used to it, but once I did I saw a noticable increase in the speed at which I type out my HTML templates.
+Simply defined, Haml is an abstract HTML preprocessor that allows you to write beautiful, DRY, well-indented and clear markup.  It provides you with an easily understood syntax that's easy to adjust to even if you have little to no prior experience with HTML preprocessors.  I think it's very possible to have a working knowledge of Haml within a relatively short amount of time.  It took about an hour for me to get used to it, but once I did I saw a noticeable increase in the speed at which I type out my HTML templates.
 
 Getting up and running with Haml is easy enough.  If you're using Ruby on Rails any file in your `app/views` folder can be switched over to Haml on the fly simply by changing its extension to `.haml`.  If you decide to go the `grunt` or `gulp` route to manage your asset pipeline, there are a few npm packages to choose from.
 
@@ -86,7 +86,7 @@ Here's an example of Haml that would throw back an error...
 
 The indentation must be consistent or you will get errors.  It will be fairly obvious when this occurs as your entire browser page will turn into an error log.  The bright side is that this error log can sometimes help you debug the issue.  Haml also forbids you from mixing tabs and spaces which will cause errors, even if at first it isn't fully apparent why.  When this occurs I'll usually navigate to `View > Indentation` in my Sublime Text and make sure `Indent Using Spaces` is flipped on. It also helps to set your `"tab_size"` in your user preferences (I keep mine at 2).  No matter which text editor is your cup of tea, there should be options that allow you to alter these settings and keep them consistent across all of your project files.  I strongly recommend doing this regardless of whether you decide to work with Haml or not.
 
-Having said that, I don't think strict indentation is a problem! I believe it's actually a feature in its own way.  By enforcing this, Haml helps preserve a certain degree of predictability and consistency allowing you to quickly scan throuhg pages and templates with little confusion as to what is nested in what.  This is worth the occasional mishap in my book.
+Having said that, I don't think strict indentation is a problem! I believe it's actually a feature in its own way.  By enforcing this, Haml helps preserve a certain degree of predictability and consistency allowing you to quickly scan through pages and templates with little to no confusion whatsoever.  This is worth the occasional mishap in my book.
 
 ###Other Features
 
