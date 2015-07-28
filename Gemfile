@@ -15,7 +15,4 @@ gem 'middleman-minify-html'
 gem "middleman-syntax"
 gem 'middleman-autoprefixer'
 
-gem 'bitters'
-gem "middleman-bourbon"
-gem "middleman-neat"
 
