@@ -10,7 +10,7 @@ description: "I talk about how to get started writing clear and maintainable HTM
 
 Simply defined, Haml is an abstract HTML preprocessor that allows you to write beautiful, DRY, well-indented and clear markup.  It provides you with an easily understood syntax that's easy to adjust to even if you have little to no prior experience with HTML preprocessors.  I think it's very possible to have a working knowledge of Haml within a relatively short amount of time.  It took about an hour for me to get used to it, but once I did I saw a noticeable increase in the speed at which I type out my HTML templates.
 
-Getting up and running with Haml is easy enough.  If you're using Ruby on Rails any file in your `app/views` folder can be switched over to Haml on the fly simply by changing its extension to `.haml`.  If you decide to go the `grunt` or `gulp` route to manage your asset pipeline, there are a few npm packages to choose from.
+Getting up and running with Haml is easy enough.  Haml can be acquired through a Ruby gem and if you're using Ruby on Rails any file in your `app/views` folder can be switched over to Haml on the fly simply by changing its extension to `.haml`.  If you decide to go the `grunt` or `gulp` route to manage your asset pipeline, there are a few npm packages to choose from.
 
 That being said, Haml is a joy to work with and I found it hard to go back to writing plain HTML after just one project.  Now, let's get started.
 
