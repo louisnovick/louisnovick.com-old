@@ -52,7 +52,7 @@ $(function(){
     });
 });
 
-$( ".active--slide" ).click(function() {
+$( ".active--slide" ).click(function(event) {
   event.preventDefault ? event.preventDefault() : event.returnValue = false;
   $( ".row--slide" ).slideToggle("slow");
 });
