@@ -1,11 +1,16 @@
 %head
-  %meta{:charset => "utf-8"}/
+  :javascript
+    var host = "louisnovick.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+  %meta{:charset => "utf-8"}
   %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
   %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
   %title= page_title
   %meta{ name: 'description', content: escape_html( current_page.data.description ) }
   = stylesheet_link_tag "application"
-  %link{:href => "favicon.ico", :rel => "icon", :type => "image/x-icon"}
+  %link{:rel => "canonical", href => "https://louisnovick.com#{current_page.url}"}
+  %link{:rel => "icon", :href => "favicon.ico", :type => "image/x-icon"}
   :javascript
     (function() {
     var config = {
