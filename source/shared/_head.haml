@@ -9,7 +9,7 @@
   %title= page_title
   %meta{ name: 'description', content: escape_html( current_page.data.description ) }
   = stylesheet_link_tag "application"
-  %link{:rel => "canonical", href => "https://louisnovick.com#{current_page.url}"}
+  %link{:rel => "canonical", :href => "https://louisnovick.com#{current_page.url}"}
   %link{:rel => "icon", :href => "favicon.ico", :type => "image/x-icon"}
   :javascript
     (function() {
